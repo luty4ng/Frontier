@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<UnityGameKit>
+  <BuildSettings>
+    <DefaultScenes>
+      <DefaultScene Name="Assets/_GameWorkflow/GameKit/GameLauncher.unity" />
+    </DefaultScenes>
+    <SearchScenePaths>
+      <SearchScenePath Path="Assets" />
+    </SearchScenePaths>
+  </BuildSettings>
+</UnityGameKit>

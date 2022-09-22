@@ -1,0 +1,17 @@
+{
+    "name": "UnityGameKit.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5d163de7c9a4c2849a742ae61dde703f",
+        "GUID:8da7a74ab19f0734fb7abad4c33a0036"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
