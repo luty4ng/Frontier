@@ -1,7 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <UnityGameKit>
   <ResourceCollection>
-    <Resources />
-    <Assets />
+    <Resources>
+      <Resource Name="Configs/BuildSettings" LoadType="0" Packed="True" />
+      <Resource Name="Configs/DebuggerSkin" LoadType="0" Packed="True" />
+      <Resource Name="Configs/ResourceBuilder" LoadType="0" Packed="True" />
+      <Resource Name="Configs/ResourceCollection" LoadType="0" Packed="True" />
+      <Resource Name="Configs/ResourceEditor" LoadType="0" Packed="True" />
+    </Resources>
+    <Assets>
+      <Asset Guid="0971a79b9b33372409be73792c8a2fa7" ResourceName="Configs/ResourceEditor" />
+      <Asset Guid="2d0b5f1cfc405374da50e5cac679de36" ResourceName="Configs/ResourceCollection" />
+      <Asset Guid="365c4517af452254b8fcf8b787c4904f" ResourceName="Configs/BuildSettings" />
+      <Asset Guid="4690c596f15effd418db98137d622f08" ResourceName="Configs/DebuggerSkin" />
+      <Asset Guid="c4fd3f4c70e5e4d47aab33fa8020d04b" ResourceName="Configs/ResourceBuilder" />
+    </Assets>
   </ResourceCollection>
 </UnityGameKit>

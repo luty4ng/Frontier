@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 1495501908
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6e1c71c3851194c3ed976d9744e1df3f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Deathkiss_128.png
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Fireball_128.png
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Shield_128.png
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Leafs_128.png
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Sword_128.png
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Arrows_128.png
+Dependencies: []

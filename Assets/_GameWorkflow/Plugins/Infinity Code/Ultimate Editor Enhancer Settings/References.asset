@@ -184,7 +184,19 @@ MonoBehaviour:
     alignWindowToBar: 1
     windowMode: 0
   _sceneHistory:
+  - name: SubScene
+    path: Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Scene/SubScene.unity
+  - name: GameScene2
+    path: Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Scene/GameScene2.unity
+  - name: GameScene1
+    path: Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Scene/GameScene1.unity
+  - name: Boot
+    path: Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/Boot.unity
   - name: GameLauncher
     path: Assets/_GameWorkflow/GameKit/GameLauncher.unity
+  - name: Main
+    path: Assets/GamePrototype/UntitledPortalGame/Scenes/Main.unity
+  - name: SampleScene
+    path: Assets/Scenes/SampleScene.unity
   - name: Default
     path: Assets/GameMain/Scenes/Default.unity

@@ -10,7 +10,7 @@
       <SourceAssetUnionLabelFilter>l:ResourceInclusive</SourceAssetUnionLabelFilter>
       <SourceAssetExceptTypeFilter>t:Script</SourceAssetExceptTypeFilter>
       <SourceAssetExceptLabelFilter>l:ResourceExclusive</SourceAssetExceptLabelFilter>
-      <AssetSorter>Path</AssetSorter>
+      <AssetSorter>Name</AssetSorter>
     </Settings>
   </ResourceEditor>
 </UnityGameKit>

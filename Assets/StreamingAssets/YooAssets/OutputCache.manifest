@@ -1,0 +1,66 @@
+ManifestFileVersion: 0
+CRC: 4268964724
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameres_entity_level1_footman_blue.bundle
+      Dependencies:
+        Dependency_0: unityshaders.bundle
+        Dependency_1: share_assets__gameworkflow_yooasset_samples_basic sample_gameart_entity_footman_fbx.bundle
+    Info_1:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameres_entity_level2_footman_green.bundle
+      Dependencies:
+        Dependency_0: unityshaders.bundle
+        Dependency_1: share_assets__gameworkflow_yooasset_samples_basic sample_gameart_entity_footman_fbx.bundle
+    Info_2:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameres_scene_gamescene1.bundle
+      Dependencies:
+        Dependency_0: assets__gameworkflow_yooasset_samples_basic sample_gameres_uipanel.bundle
+        Dependency_1: assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle
+        Dependency_2: assets__gameworkflow_yooasset_samples_basic sample_gameart_uifont_roboto.bundle
+    Info_3:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameres_scene_gamescene2.bundle
+      Dependencies:
+        Dependency_0: assets__gameworkflow_yooasset_samples_basic sample_gameart_uifont_roboto.bundle
+    Info_4:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameres_scene_subscene.bundle
+      Dependencies: {}
+    Info_5:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameres_music.bundle
+      Dependencies: {}
+    Info_6:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameres_texture.bundle
+      Dependencies: {}
+    Info_7:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameres_tpatlas.bundle
+      Dependencies: {}
+    Info_8:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameres_uipanel.bundle
+      Dependencies:
+        Dependency_0: assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle
+    Info_9:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle
+      Dependencies: {}
+    Info_10:
+      Name: unityshaders.bundle
+      Dependencies: {}
+    Info_11:
+      Name: assets__gameworkflow_yooasset_samples_basic sample_gameart_uifont_roboto.bundle
+      Dependencies:
+        Dependency_0: share_packages_com.unity.searcher_editor_resources_flatskin_font.bundle
+        Dependency_1: share_assets__gameworkflow_lutykit_prototyping_modern ui pack_fonts.bundle
+    Info_12:
+      Name: share_assets__gameworkflow_yooasset_samples_basic sample_gameart_entity_footman_fbx.bundle
+      Dependencies:
+        Dependency_0: share_packages_com.unity.render-pipelines.universal_runtime_materials.bundle
+    Info_13:
+      Name: share_packages_com.unity.render-pipelines.universal_runtime_materials.bundle
+      Dependencies:
+        Dependency_0: unityshaders.bundle
+    Info_14:
+      Name: share_packages_com.unity.searcher_editor_resources_flatskin_font.bundle
+      Dependencies: {}
+    Info_15:
+      Name: share_assets__gameworkflow_lutykit_prototyping_modern ui pack_fonts.bundle
+      Dependencies:
+        Dependency_0: share_packages_com.unity.searcher_editor_resources_flatskin_font.bundle

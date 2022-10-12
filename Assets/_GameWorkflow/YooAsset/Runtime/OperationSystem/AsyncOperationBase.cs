@@ -88,6 +88,7 @@ namespace YooAsset
 		}
 		void IEnumerator.Reset()
 		{
+			
 		}
 		object IEnumerator.Current => null;
 

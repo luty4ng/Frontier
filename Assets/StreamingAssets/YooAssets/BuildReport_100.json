@@ -1,0 +1,614 @@
+{
+    "Summary": {
+        "YooVersion": "",
+        "UnityVersion": "2021.3.8f1",
+        "BuildDate": "2022/10/12 16:06:00",
+        "BuildSeconds": 44,
+        "BuildTarget": 19,
+        "BuildPipeline": 0,
+        "BuildMode": 0,
+        "BuildVersion": 100,
+        "BuildinTags": "buildin;",
+        "EnableAddressable": true,
+        "CopyBuildinTagFiles": true,
+        "EncryptionServicesClassName": "EncryptionNone",
+        "OutputNameStyle": 1,
+        "CompressOption": 2,
+        "DisableWriteTypeTree": false,
+        "IgnoreTypeTreeChanges": true,
+        "AssetFileTotalCount": 58,
+        "MainAssetTotalCount": 21,
+        "AllBundleTotalCount": 20,
+        "AllBundleTotalSize": 3346288,
+        "BuildinBundleTotalCount": 13,
+        "BuildinBundleTotalSize": 2204787,
+        "EncryptedBundleTotalCount": 0,
+        "EncryptedBundleTotalSize": 0,
+        "RawBundleTotalCount": 4,
+        "RawBundleTotalSize": 72
+    },
+    "AssetInfos": [
+        {
+            "Address": "footman_Blue",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Entity/Level1/footman_Blue.prefab",
+            "AssetGUID": "c5bad295ed8f6754e9bd894fae5183f7",
+            "AssetTags": [
+                "level",
+                "level1"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_entity_level1_footman_blue.bundle",
+            "MainBundleSize": 142051,
+            "DependBundles": [
+                "unityshaders.bundle",
+                "share_assets__gameworkflow_yooasset_samples_basic sample_gameart_entity_footman_fbx.bundle",
+                "share_packages_com.unity.render-pipelines.universal_runtime_materials.bundle"
+            ],
+            "DependAssets": [
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/Texture/footmanPBRBlue/footman_Albedo.png",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/Texture/footmanPBRBlue/footman_Normal.png",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/Material/footmanPBRBlue.mat",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Shaders/StandardMobile.shader",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/Texture/footmanPBRBlue/footman_Metallic.png",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/FBX/footman.fbx",
+                "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat",
+                "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/Texture/footmanPBRBlue/footman_AO.png"
+            ]
+        },
+        {
+            "Address": "footman_Green",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Entity/Level2/footman_Green.prefab",
+            "AssetGUID": "24fa9e3e1d2eec940ad985538026a810",
+            "AssetTags": [
+                "level",
+                "level2"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_entity_level2_footman_green.bundle",
+            "MainBundleSize": 150123,
+            "DependBundles": [
+                "unityshaders.bundle",
+                "share_assets__gameworkflow_yooasset_samples_basic sample_gameart_entity_footman_fbx.bundle",
+                "share_packages_com.unity.render-pipelines.universal_runtime_materials.bundle"
+            ],
+            "DependAssets": [
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/Texture/footmanPBRGreen/footman_Normal.png",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/Material/footmanPBRGreen.mat",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Shaders/StandardMobile.shader",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/Texture/footmanPBRGreen/footman_Albedo.png",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/Texture/footmanPBRGreen/footman_AO.png",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/FBX/footman.fbx",
+                "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat",
+                "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/Texture/footmanPBRGreen/footman_Metallic.png"
+            ]
+        },
+        {
+            "Address": "GameScene1",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Scene/GameScene1.unity",
+            "AssetGUID": "743fd99df706c374dabd963b592768b2",
+            "AssetTags": [
+                "buildin"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_scene_gamescene1.bundle",
+            "MainBundleSize": 40621,
+            "DependBundles": [
+                "assets__gameworkflow_yooasset_samples_basic sample_gameart_uifont_roboto.bundle",
+                "assets__gameworkflow_yooasset_samples_basic sample_gameres_uipanel.bundle",
+                "share_packages_com.unity.searcher_editor_resources_flatskin_font.bundle",
+                "assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle",
+                "share_assets__gameworkflow_lutykit_prototyping_modern ui pack_fonts.bundle"
+            ],
+            "DependAssets": [
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-ThinItalic.ttf",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UIPanel/ui_window.prefab",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-Italic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-ThinItalic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BoldItalic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Medium.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Bold.ttf",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Fireball_128.png",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BlackItalic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Regular.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Italic.ttf",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Shield_128.png",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-Regular.ttf",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-BoldItalic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Thin.ttf",
+                "Assets/_GameWorkflow/LutyKit/Prototyping/Modern UI Pack/Fonts/Roboto-Regular.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-LightItalic.ttf",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Arrows_128.png",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-Bold.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Black.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-MediumItalic.ttf"
+            ]
+        },
+        {
+            "Address": "GameScene2",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Scene/GameScene2.unity",
+            "AssetGUID": "84d0ee120058cfa4281e3275e9b3fd74",
+            "AssetTags": [
+                "buildin"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_scene_gamescene2.bundle",
+            "MainBundleSize": 38536,
+            "DependBundles": [
+                "assets__gameworkflow_yooasset_samples_basic sample_gameart_uifont_roboto.bundle",
+                "share_packages_com.unity.searcher_editor_resources_flatskin_font.bundle",
+                "share_assets__gameworkflow_lutykit_prototyping_modern ui pack_fonts.bundle"
+            ],
+            "DependAssets": [
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-ThinItalic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-Italic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-ThinItalic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BoldItalic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Medium.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Bold.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BlackItalic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Regular.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Italic.ttf",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-Regular.ttf",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-BoldItalic.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Thin.ttf",
+                "Assets/_GameWorkflow/LutyKit/Prototyping/Modern UI Pack/Fonts/Roboto-Regular.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-LightItalic.ttf",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-Bold.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Black.ttf",
+                "Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-MediumItalic.ttf"
+            ]
+        },
+        {
+            "Address": "SubScene",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Scene/SubScene.unity",
+            "AssetGUID": "ad9e86e5aefbbf64083dda1ab0f7a91c",
+            "AssetTags": [
+                "buildin"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_scene_subscene.bundle",
+            "MainBundleSize": 51053,
+            "DependBundles": [],
+            "DependAssets": [
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/PacMan/Tex.jpeg",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/PacMan/Mat.mat"
+            ]
+        },
+        {
+            "Address": "config1",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Config/config1.txt",
+            "AssetGUID": "df4a3382bf8490d44acbfdbf473fb314",
+            "AssetTags": [
+                "buildin"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_config_config1.rawfile",
+            "MainBundleSize": 18,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "config2",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Config/config2.txt",
+            "AssetGUID": "8029b8bd08b5ae149b382ca8b84a83c5",
+            "AssetTags": [
+                "buildin"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_config_config2.rawfile",
+            "MainBundleSize": 18,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "config3",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Config/config3.txt",
+            "AssetGUID": "7a557c8738b2e7b4997120e7bd5b5da4",
+            "AssetTags": [
+                "buildin"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_config_config3.rawfile",
+            "MainBundleSize": 18,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "config4",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Config/config4.txt",
+            "AssetGUID": "166eaa4476c4d7f479886844f8deaa48",
+            "AssetTags": [
+                "buildin"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_config_config4.rawfile",
+            "MainBundleSize": 18,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "music_town",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Music/music_town.wav",
+            "AssetGUID": "89e7ab76442857643823bf370c14dc46",
+            "AssetTags": [
+                "buildin"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_music.bundle",
+            "MainBundleSize": 139212,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "tex_bg",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Texture/tex_bg.png",
+            "AssetGUID": "a68193e2aef6b43d4b4e05b967814d88",
+            "AssetTags": [
+                "panel",
+                "texture"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_texture.bundle",
+            "MainBundleSize": 624090,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "tex_logo",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Texture/tex_logo.png",
+            "AssetGUID": "8667cccf4a14c4143a48548c0f754ce8",
+            "AssetTags": [
+                "panel",
+                "texture"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_texture.bundle",
+            "MainBundleSize": 624090,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "tpAtlas",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/TpAtlas/tpAtlas.png",
+            "AssetGUID": "19aec64f4e8f6b64c8b7cf69415337f8",
+            "AssetTags": [
+                "panel"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_tpatlas.bundle",
+            "MainBundleSize": 53812,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "ui_window",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UIPanel/ui_window.prefab",
+            "AssetGUID": "c960f31742c5ef84dadfc5324f497dc4",
+            "AssetTags": [
+                "panel"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_uipanel.bundle",
+            "MainBundleSize": 5246,
+            "DependBundles": [
+                "assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle"
+            ],
+            "DependAssets": [
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Shield_128.png",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Arrows_128.png"
+            ]
+        },
+        {
+            "Address": "ui_window2",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UIPanel/ui_window2.prefab",
+            "AssetGUID": "e4f6646a8e92fec4e926ffb00efae2a6",
+            "AssetTags": [
+                "panel"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_uipanel.bundle",
+            "MainBundleSize": 5246,
+            "DependBundles": [
+                "assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle"
+            ],
+            "DependAssets": [
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Shield_128.png",
+                "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Arrows_128.png"
+            ]
+        },
+        {
+            "Address": "Icon_Arrows_128",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Arrows_128.png",
+            "AssetGUID": "145b173105dad2d44a8c243a25f27147",
+            "AssetTags": [
+                "panel"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle",
+            "MainBundleSize": 230398,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "Icon_Deathkiss_128",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Deathkiss_128.png",
+            "AssetGUID": "04285c1f1c3943b4c81187f40a31622d",
+            "AssetTags": [
+                "panel"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle",
+            "MainBundleSize": 230398,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "Icon_Fireball_128",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Fireball_128.png",
+            "AssetGUID": "3ef466bedc075214ab47aa3289123438",
+            "AssetTags": [
+                "panel"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle",
+            "MainBundleSize": 230398,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "Icon_Leafs_128",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Leafs_128.png",
+            "AssetGUID": "9a4febb4946416146b75846aeffdee1a",
+            "AssetTags": [
+                "panel"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle",
+            "MainBundleSize": 230398,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "Icon_Shield_128",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Shield_128.png",
+            "AssetGUID": "e7478af3e19f2754186cf50b9fcc82aa",
+            "AssetTags": [
+                "panel"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle",
+            "MainBundleSize": 230398,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "Icon_Sword_128",
+            "AssetPath": "Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/UISprite/Icon_Sword_128.png",
+            "AssetGUID": "5cfcf3596b4cccc4f93e702d4336b816",
+            "AssetTags": [
+                "panel"
+            ],
+            "MainBundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle",
+            "MainBundleSize": 230398,
+            "DependBundles": [],
+            "DependAssets": []
+        }
+    ],
+    "BundleInfos": [
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_entity_level1_footman_blue.bundle",
+            "FileName": "667db5628987715adbdc05799b2d7e63",
+            "FileHash": "667db5628987715adbdc05799b2d7e63",
+            "FileCRC": "c70618ff",
+            "FileSize": 142051,
+            "Tags": [
+                "level",
+                "level1"
+            ],
+            "Flags": 0
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_entity_level2_footman_green.bundle",
+            "FileName": "74ace59ef8570ae5d36f60b4bf42ba9f",
+            "FileHash": "74ace59ef8570ae5d36f60b4bf42ba9f",
+            "FileCRC": "c12d083d",
+            "FileSize": 150123,
+            "Tags": [
+                "level",
+                "level2"
+            ],
+            "Flags": 0
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_scene_gamescene1.bundle",
+            "FileName": "da3b4378808857e9c58794d7e98a5959",
+            "FileHash": "da3b4378808857e9c58794d7e98a5959",
+            "FileCRC": "b403bbbf",
+            "FileSize": 40621,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 2
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_scene_gamescene2.bundle",
+            "FileName": "6bd07f7a38cff634fb5769bcf9f0da4c",
+            "FileHash": "6bd07f7a38cff634fb5769bcf9f0da4c",
+            "FileCRC": "9b7b0b66",
+            "FileSize": 38536,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 2
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_scene_subscene.bundle",
+            "FileName": "1763c0eb412c8a41f2d7cd02e576ae68",
+            "FileHash": "1763c0eb412c8a41f2d7cd02e576ae68",
+            "FileCRC": "9bd89b68",
+            "FileSize": 51053,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 2
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_config_config1.rawfile",
+            "FileName": "6edcc00da62d4d285ceada0cbe484a5e",
+            "FileHash": "6edcc00da62d4d285ceada0cbe484a5e",
+            "FileCRC": "333ed771",
+            "FileSize": 18,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 6
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_config_config2.rawfile",
+            "FileName": "48f02c3e2263aacc7413b3b856d48c92",
+            "FileHash": "48f02c3e2263aacc7413b3b856d48c92",
+            "FileCRC": "896fdee8",
+            "FileSize": 18,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 6
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_config_config3.rawfile",
+            "FileName": "e1a2de84db3b3d19d48c1779fd64e8fa",
+            "FileHash": "e1a2de84db3b3d19d48c1779fd64e8fa",
+            "FileCRC": "1f5fd99f",
+            "FileSize": 18,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 6
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_config_config4.rawfile",
+            "FileName": "676c8314e9aa49b0b63d5a2876729ad7",
+            "FileHash": "676c8314e9aa49b0b63d5a2876729ad7",
+            "FileCRC": "bccabd01",
+            "FileSize": 18,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 6
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_music.bundle",
+            "FileName": "9f40b66ee22ce98e786510e9e3b69f87",
+            "FileHash": "9f40b66ee22ce98e786510e9e3b69f87",
+            "FileCRC": "fa9ddc61",
+            "FileSize": 139212,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 2
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_texture.bundle",
+            "FileName": "2b6edd94c2790f78b1dfa5d589f1a87a",
+            "FileHash": "2b6edd94c2790f78b1dfa5d589f1a87a",
+            "FileCRC": "9a195a49",
+            "FileSize": 624090,
+            "Tags": [
+                "panel",
+                "texture"
+            ],
+            "Flags": 0
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_tpatlas.bundle",
+            "FileName": "c75a25c90a628b5ebbb037b93c213004",
+            "FileHash": "c75a25c90a628b5ebbb037b93c213004",
+            "FileCRC": "8cf5e368",
+            "FileSize": 53812,
+            "Tags": [
+                "panel"
+            ],
+            "Flags": 0
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_uipanel.bundle",
+            "FileName": "c3cb9ec3adaee70d0a5616bcc964fe36",
+            "FileHash": "c3cb9ec3adaee70d0a5616bcc964fe36",
+            "FileCRC": "5a217523",
+            "FileSize": 5246,
+            "Tags": [
+                "panel",
+                "buildin"
+            ],
+            "Flags": 2
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameres_uisprite.bundle",
+            "FileName": "81e4fa507567da23cb918fe3cb5c460f",
+            "FileHash": "81e4fa507567da23cb918fe3cb5c460f",
+            "FileCRC": "9aab76e2",
+            "FileSize": 230398,
+            "Tags": [
+                "panel",
+                "buildin"
+            ],
+            "Flags": 2
+        },
+        {
+            "BundleName": "unityshaders.bundle",
+            "FileName": "cf03546cab9dfcb99cfa5d6bd540786b",
+            "FileHash": "cf03546cab9dfcb99cfa5d6bd540786b",
+            "FileCRC": "609b82ab",
+            "FileSize": 56038,
+            "Tags": [
+                "level",
+                "level1",
+                "level2"
+            ],
+            "Flags": 0
+        },
+        {
+            "BundleName": "assets__gameworkflow_yooasset_samples_basic sample_gameart_uifont_roboto.bundle",
+            "FileName": "928837ad6c775bfaba7a7248133ac6cb",
+            "FileHash": "928837ad6c775bfaba7a7248133ac6cb",
+            "FileCRC": "42b0e459",
+            "FileSize": 530464,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 2
+        },
+        {
+            "BundleName": "share_assets__gameworkflow_yooasset_samples_basic sample_gameart_entity_footman_fbx.bundle",
+            "FileName": "60acc283aaf46d35405e8282ddb9e775",
+            "FileHash": "60acc283aaf46d35405e8282ddb9e775",
+            "FileCRC": "c07e3222",
+            "FileSize": 112426,
+            "Tags": [
+                "level",
+                "level1",
+                "level2"
+            ],
+            "Flags": 0
+        },
+        {
+            "BundleName": "share_packages_com.unity.render-pipelines.universal_runtime_materials.bundle",
+            "FileName": "51916961f8b149c6fdcd60e378829c70",
+            "FileHash": "51916961f8b149c6fdcd60e378829c70",
+            "FileCRC": "8384df6a",
+            "FileSize": 2961,
+            "Tags": [
+                "level",
+                "level1",
+                "level2"
+            ],
+            "Flags": 0
+        },
+        {
+            "BundleName": "share_packages_com.unity.searcher_editor_resources_flatskin_font.bundle",
+            "FileName": "9370968573e2122359ec2c21e14028a8",
+            "FileHash": "9370968573e2122359ec2c21e14028a8",
+            "FileCRC": "cd6067d7",
+            "FileSize": 1062163,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 2
+        },
+        {
+            "BundleName": "share_assets__gameworkflow_lutykit_prototyping_modern ui pack_fonts.bundle",
+            "FileName": "fd61dfded120f011f65b533df72f0f68",
+            "FileHash": "fd61dfded120f011f65b533df72f0f68",
+            "FileCRC": "791a5ec7",
+            "FileSize": 107022,
+            "Tags": [
+                "buildin"
+            ],
+            "Flags": 2
+        }
+    ]
+}

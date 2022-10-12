@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 3674028122
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 12e4cea9c40aee2ed49e0d1bc1b79e86
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5c012fee17ff0a2fbed210f63d8706e8
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-ThinItalic.ttf
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-Italic.ttf
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-BoldItalic.ttf
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-Regular.ttf
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIFont/Roboto/Roboto-Bold.ttf
+Dependencies:
+- D:/UnityProjects/Focus/Frontier/Bundles/StandaloneWindows64/OutputCache/share_assets__gameworkflow_lutykit_prototyping_modern
+  ui pack_fonts.bundle
+- D:/UnityProjects/Focus/Frontier/Bundles/StandaloneWindows64/OutputCache/share_packages_com.unity.searcher_editor_resources_flatskin_font.bundle

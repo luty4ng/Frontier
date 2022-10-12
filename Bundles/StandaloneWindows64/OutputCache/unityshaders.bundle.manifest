@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 1534663063
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9012b75de1427aba538d5309bb517780
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6cab5de670d0fb91f4da9989cdce513d
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 200
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/ShaderVariants/MyShaderVariants.shadervariants
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Shaders/StandardMobile.shader
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/ShaderVariants/MyShaderVariants.json
+- Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Shaders/MyUnlitShader.shader
+Dependencies: []

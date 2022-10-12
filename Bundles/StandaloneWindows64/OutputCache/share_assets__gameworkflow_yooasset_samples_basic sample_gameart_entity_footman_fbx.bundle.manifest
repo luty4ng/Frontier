@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 1238819015
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 64ca9aaa2e231f71a419c9fd2ffe3c2a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f250464529e0ac475addbe2eace1e932
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/Entity/Footman/FBX/footman.fbx
+Dependencies:
+- D:/UnityProjects/Focus/Frontier/Bundles/StandaloneWindows64/OutputCache/share_packages_com.unity.render-pipelines.universal_runtime_materials.bundle
