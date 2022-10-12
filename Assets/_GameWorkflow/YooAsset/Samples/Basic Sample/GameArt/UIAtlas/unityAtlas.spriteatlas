@@ -6,8 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: unityAtlas
-  serializedVersion: 2
+  m_Name: Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIAtlas/unityAtlas.spriteatlas
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -29,6 +28,7 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 0
       enableTightPacking: 0
+      enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
@@ -52,6 +52,5 @@ SpriteAtlas:
   - Icon_Fireball_128
   - Icon_Deathkiss_128
   m_RenderDataMap: {}
-  m_Tag: unityAtlas
+  m_Tag: Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameArt/UIAtlas/unityAtlas.spriteatlas
   m_IsVariant: 0
-  m_IsPlaceholder: 0
