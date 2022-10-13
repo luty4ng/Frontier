@@ -25,20 +25,11 @@ namespace UnityGameKit.Runtime
                         }
                     }
 
-                    ResourceComponent resourceCompoent = GameKitComponentCenter.GetComponent<ResourceComponent>();
-                    if (resourceCompoent != null)
+                    if (GUILayout.Button("Unload Unused Assets", GUILayout.Height(30f)))
                     {
-                        if (GUILayout.Button("Unload Unused Assets", GUILayout.Height(30f)))
-                        {
-                            resourceCompoent.ForceUnloadUnusedAssets(false);
-                        }
-
-                        if (GUILayout.Button("Unload Unused Assets and Garbage Collect", GUILayout.Height(30f)))
-                        {
-                            resourceCompoent.ForceUnloadUnusedAssets(true);
-                        }
+                        YooAsset.YooAssets.ForceUnloadAllAssets();       
                     }
-
+                    
                     if (GUILayout.Button("Shutdown Game Kit (None)", GUILayout.Height(30f)))
                     {
                         GameKitComponentCenter.Shutdown(ShutdownType.None);

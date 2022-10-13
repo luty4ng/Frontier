@@ -8,8 +8,6 @@ namespace UnityGameKit.Runtime
     /// </summary>
     public class DefaultUIFormHelper : UIFormHelperBase
     {
-        private ResourceComponent m_ResourceComponent = null;
-
         /// <summary>
         /// 实例化界面。
         /// </summary>
@@ -50,18 +48,13 @@ namespace UnityGameKit.Runtime
         /// <param name="uiFormInstance">要释放的界面实例。</param>
         public override void ReleaseUIForm(object uiFormAsset, object uiFormInstance)
         {
-            m_ResourceComponent.UnloadAsset(uiFormAsset);
+            // YooAsset UnloadAsset
             Destroy((Object)uiFormInstance);
         }
 
         private void Start()
         {
-            m_ResourceComponent = GameKitComponentCenter.GetComponent<ResourceComponent>();
-            if (m_ResourceComponent == null)
-            {
-                Log.Fatal("Resource component is invalid.");
-                return;
-            }
+
         }
     }
 }

@@ -388,11 +388,7 @@ namespace UnityGameKit.Runtime
                 objectPoolComponent.ReleaseAllUnused();
             }
 
-            ResourceComponent resourceCompoent = GameKitComponentCenter.GetComponent<ResourceComponent>();
-            if (resourceCompoent != null)
-            {
-                resourceCompoent.ForceUnloadUnusedAssets(true);
-            }
+            YooAsset.YooAssets.ForceUnloadAllAssets();        
         }
     }
 }

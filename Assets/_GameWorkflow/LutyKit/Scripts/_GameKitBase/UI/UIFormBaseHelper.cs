@@ -5,7 +5,6 @@ using UnityGameKit.Runtime;
 
 public class UIFormBaseHelper : UIFormHelperBase
 {
-    // private ResourceComponent m_ResourceComponent = null;
     public override object InstantiateUIForm(object uiFormAsset)
     {
         GameObject uIInstance = Instantiate((GameObject)uiFormAsset); 
@@ -35,19 +34,13 @@ public class UIFormBaseHelper : UIFormHelperBase
 
     public override void ReleaseUIForm(object uiFormAsset, object uiFormInstance)
     {
-        // m_ResourceComponent.UnloadAsset(uiFormAsset);
-        // AddressableManager.instance.ReleaseHandle(uiFormAsset);
+        // YooAsset UnloadAsset
         Destroy((Object)uiFormInstance);
     }
 
     private void Start()
     {
-        // m_ResourceComponent = GameKitComponentCenter.GetComponent<ResourceComponent>();
-        // if (m_ResourceComponent == null)
-        // {
-        //     Log.Fatal("Resource component is invalid.");
-        //     return;
-        // }
+
     }
 }
 
