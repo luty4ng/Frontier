@@ -142,14 +142,14 @@ namespace UnityGameKit.Runtime
                 return;
             }
 
-            if (baseComponent.EditorResourceMode)
-            {
-                m_SoundManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            }
-            else
-            {
-                m_SoundManager.SetResourceManager(GameKitModuleCenter.GetModule<IResourceManager>());
-            }
+            // if (baseComponent.EditorResourceMode)
+            // {
+            //     m_SoundManager.SetResourceManager(baseComponent.EditorResourceHelper);
+            // }
+            // else
+            // {
+            //     m_SoundManager.SetResourceManager(GameKitModuleCenter.GetModule<IResourceManager>());
+            // }
 
             SoundHelperBase soundHelper = Helper.CreateHelper(m_SoundHelperTypeName, m_CustomSoundHelper);
             if (soundHelper == null)

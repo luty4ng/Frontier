@@ -29,7 +29,7 @@ namespace GameKit.DataTable
         /// 设置资源管理器。
         /// </summary>
         /// <param name="resourceManager">资源管理器。</param>
-        void SetResourceManager(IResourceManager resourceManager);
+        // void SetResourceManager(IResourceManager resourceManager);
 
         /// <summary>
         /// 设置数据表数据提供者辅助器。

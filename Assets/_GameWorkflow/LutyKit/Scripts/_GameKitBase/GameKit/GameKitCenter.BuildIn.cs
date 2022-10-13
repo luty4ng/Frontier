@@ -28,6 +28,7 @@ public partial class GameKitCenter : MonoBehaviour
         Setting = GameKitComponentCenter.GetComponent<SettingComponent>();
         Scene = GameKitComponentCenter.GetComponent<SceneComponent>();
         Resource = GameKitComponentCenter.GetComponent<ResourceComponent>();
+        Debug.Log("Init Over");
     }
 }
 

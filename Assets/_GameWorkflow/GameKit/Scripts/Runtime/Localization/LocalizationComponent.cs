@@ -124,14 +124,14 @@ namespace UnityGameKit.Runtime
                 return;
             }
 
-            if (baseComponent.EditorResourceMode)
-            {
-                m_LocalizationManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            }
-            else
-            {
-                m_LocalizationManager.SetResourceManager(GameKitModuleCenter.GetModule<IResourceManager>());
-            }
+            // if (baseComponent.EditorResourceMode)
+            // {
+            //     m_LocalizationManager.SetResourceManager(baseComponent.EditorResourceHelper);
+            // }
+            // else
+            // {
+            //     m_LocalizationManager.SetResourceManager(GameKitModuleCenter.GetModule<IResourceManager>());
+            // }
 
             LocalizationHelperBase localizationHelper = Helper.CreateHelper(m_LocalizationHelperTypeName, m_CustomLocalizationHelper);
             if (localizationHelper == null)

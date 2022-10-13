@@ -1,7 +1,7 @@
 ﻿using GameKit.ObjectPool;
-using GameKit.Resource;
 using System;
 using System.Collections.Generic;
+using YooAsset.GameKitPatcher;
 
 namespace GameKit.UI
 {
@@ -16,7 +16,7 @@ namespace GameKit.UI
         private readonly Queue<IUIForm> m_RecycleQueue;
         private readonly LoadAssetCallbacks m_LoadAssetCallbacks;
         private IObjectPoolManager m_ObjectPoolManager;
-        private IResourceManager m_ResourceManager;
+        // private IResourceManager m_ResourceManager;
         private IObjectPool<UIFormInstanceObject> m_InstancePool;
         private IUIFormHelper m_UIFormHelper;
         private int m_Serial;
@@ -38,7 +38,7 @@ namespace GameKit.UI
             m_RecycleQueue = new Queue<IUIForm>();
             m_LoadAssetCallbacks = new LoadAssetCallbacks(LoadAssetSuccessCallback, LoadAssetFailureCallback, LoadAssetUpdateCallback, LoadAssetDependencyAssetCallback);
             m_ObjectPoolManager = null;
-            m_ResourceManager = null;
+            // m_ResourceManager = null;
             m_InstancePool = null;
             m_UIFormHelper = null;
             m_Serial = 0;
@@ -248,15 +248,15 @@ namespace GameKit.UI
         /// 设置资源管理器。
         /// </summary>
         /// <param name="resourceManager">资源管理器。</param>
-        public void SetResourceManager(IResourceManager resourceManager)
-        {
-            if (resourceManager == null)
-            {
-                throw new GameKitException("Resource manager is invalid.");
-            }
+        // public void SetResourceManager(IResourceManager resourceManager)
+        // {
+        //     if (resourceManager == null)
+        //     {
+        //         throw new GameKitException("Resource manager is invalid.");
+        //     }
 
-            m_ResourceManager = resourceManager;
-        }
+        //     m_ResourceManager = resourceManager;
+        // }
 
         /// <summary>
         /// 设置界面辅助器。
@@ -626,7 +626,7 @@ namespace GameKit.UI
         /// <returns>界面的序列编号。</returns>
         public int OpenUIForm(string uiFormAssetName, string uiGroupName)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, Constant.DefaultPriority, false, null);
+            return OpenUIForm(uiFormAssetName, uiGroupName, 0, false, null);
         }
 
         /// <summary>
@@ -650,7 +650,7 @@ namespace GameKit.UI
         /// <returns>界面的序列编号。</returns>
         public int OpenUIForm(string uiFormAssetName, string uiGroupName, bool pauseCoveredUIForm)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, Constant.DefaultPriority, pauseCoveredUIForm, null);
+            return OpenUIForm(uiFormAssetName, uiGroupName, 0, pauseCoveredUIForm, null);
         }
 
         /// <summary>
@@ -662,7 +662,7 @@ namespace GameKit.UI
         /// <returns>界面的序列编号。</returns>
         public int OpenUIForm(string uiFormAssetName, string uiGroupName, object userData)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, Constant.DefaultPriority, false, userData);
+            return OpenUIForm(uiFormAssetName, uiGroupName, 0, false, userData);
         }
 
         /// <summary>
@@ -701,7 +701,7 @@ namespace GameKit.UI
         /// <returns>界面的序列编号。</returns>
         public int OpenUIForm(string uiFormAssetName, string uiGroupName, bool pauseCoveredUIForm, object userData)
         {
-            return OpenUIForm(uiFormAssetName, uiGroupName, Constant.DefaultPriority, pauseCoveredUIForm, userData);
+            return OpenUIForm(uiFormAssetName, uiGroupName, 0, pauseCoveredUIForm, userData);
         }
 
         /// <summary>
@@ -715,10 +715,10 @@ namespace GameKit.UI
         /// <returns>界面的序列编号。</returns>
         public int OpenUIForm(string uiFormAssetName, string uiGroupName, int priority, bool pauseCoveredUIForm, object userData)
         {
-            if (m_ResourceManager == null)
-            {
-                throw new GameKitException("You must set resource manager first.");
-            }
+            // if (m_ResourceManager == null)
+            // {
+            //     throw new GameKitException("You must set resource manager first.");
+            // }
 
             if (m_UIFormHelper == null)
             {
@@ -746,7 +746,7 @@ namespace GameKit.UI
             if (uiFormInstanceObject == null)
             {
                 m_UIFormsBeingLoaded.Add(serialId, uiFormAssetName);
-                m_ResourceManager.LoadAsset(uiFormAssetName, priority, m_LoadAssetCallbacks, OpenUIFormInfo.Create(serialId, uiGroup, pauseCoveredUIForm, userData));
+                YooAsset.GameKitPatcher.Entry.LoadAsset(uiFormAssetName, priority, m_LoadAssetCallbacks, OpenUIFormInfo.Create(serialId, uiGroup, pauseCoveredUIForm, userData));
             }
             else
             {
@@ -985,7 +985,7 @@ namespace GameKit.UI
             m_UIFormsBeingLoaded.Remove(openUIFormInfo.SerialId);
             UIFormInstanceObject uiFormInstanceObject = UIFormInstanceObject.Create(uiFormAssetName, uiFormAsset, m_UIFormHelper.InstantiateUIForm(uiFormAsset), m_UIFormHelper);
             m_InstancePool.Register(uiFormInstanceObject, true);
-
+            
             InternalOpenUIForm(openUIFormInfo.SerialId, uiFormAssetName, openUIFormInfo.UIGroup, uiFormInstanceObject.Target, openUIFormInfo.PauseCoveredUIForm, true, duration, openUIFormInfo.UserData);
             ReferencePool.Release(openUIFormInfo);
         }

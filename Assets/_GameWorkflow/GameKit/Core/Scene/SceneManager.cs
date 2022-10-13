@@ -1,4 +1,4 @@
-﻿using GameKit.Resource;
+﻿using YooAsset.GameKitPatcher;
 using System;
 using System.Collections.Generic;
 
@@ -14,7 +14,7 @@ namespace GameKit.Scene
         private readonly List<string> m_UnloadingSceneAssetNames;
         private readonly LoadSceneCallbacks m_LoadSceneCallbacks;
         private readonly UnloadSceneCallbacks m_UnloadSceneCallbacks;
-        private IResourceManager m_ResourceManager;
+        // private IResourceManager m_ResourceManager;
         private EventHandler<LoadSceneSuccessEventArgs> m_LoadSceneSuccessEventHandler;
         private EventHandler<LoadSceneFailureEventArgs> m_LoadSceneFailureEventHandler;
         private EventHandler<LoadSceneUpdateEventArgs> m_LoadSceneUpdateEventHandler;
@@ -32,7 +32,7 @@ namespace GameKit.Scene
             m_UnloadingSceneAssetNames = new List<string>();
             m_LoadSceneCallbacks = new LoadSceneCallbacks(LoadSceneSuccessCallback, LoadSceneFailureCallback, LoadSceneUpdateCallback, LoadSceneDependencyAssetCallback);
             m_UnloadSceneCallbacks = new UnloadSceneCallbacks(UnloadSceneSuccessCallback, UnloadSceneFailureCallback);
-            m_ResourceManager = null;
+            // m_ResourceManager = null;
             m_LoadSceneSuccessEventHandler = null;
             m_LoadSceneFailureEventHandler = null;
             m_LoadSceneUpdateEventHandler = null;
@@ -177,15 +177,15 @@ namespace GameKit.Scene
         /// 设置资源管理器。
         /// </summary>
         /// <param name="resourceManager">资源管理器。</param>
-        public void SetResourceManager(IResourceManager resourceManager)
-        {
-            if (resourceManager == null)
-            {
-                throw new GameKitException("Resource manager is invalid.");
-            }
+        // public void SetResourceManager(IResourceManager resourceManager)
+        // {
+        //     if (resourceManager == null)
+        //     {
+        //         throw new GameKitException("Resource manager is invalid.");
+        //     }
 
-            m_ResourceManager = resourceManager;
-        }
+        //     m_ResourceManager = resourceManager;
+        // }
 
         /// <summary>
         /// 获取场景是否已加载。
@@ -311,7 +311,8 @@ namespace GameKit.Scene
         /// <returns>场景资源是否存在。</returns>
         public bool HasScene(string sceneAssetName)
         {
-            return m_ResourceManager.HasAsset(sceneAssetName) != HasAssetResult.NotExist;
+            // return m_ResourceManager.HasAsset(sceneAssetName) != HasAssetResult.NotExist;
+            return false;
         }
 
         /// <summary>
@@ -320,7 +321,7 @@ namespace GameKit.Scene
         /// <param name="sceneAssetName">场景资源名称。</param>
         public void LoadScene(string sceneAssetName)
         {
-            LoadScene(sceneAssetName, Constant.DefaultPriority, null);
+            LoadScene(sceneAssetName, 0, null);
         }
 
         /// <summary>
@@ -340,7 +341,7 @@ namespace GameKit.Scene
         /// <param name="userData">用户自定义数据。</param>
         public void LoadScene(string sceneAssetName, object userData)
         {
-            LoadScene(sceneAssetName, Constant.DefaultPriority, userData);
+            LoadScene(sceneAssetName, 0, userData);
         }
 
         /// <summary>
@@ -356,10 +357,10 @@ namespace GameKit.Scene
                 throw new GameKitException("Scene asset name is invalid.");
             }
 
-            if (m_ResourceManager == null)
-            {
-                throw new GameKitException("You must set resource manager first.");
-            }
+            // if (m_ResourceManager == null)
+            // {
+            //     throw new GameKitException("You must set resource manager first.");
+            // }
 
             if (SceneIsUnloading(sceneAssetName))
             {
@@ -377,7 +378,7 @@ namespace GameKit.Scene
             }
 
             m_LoadingSceneAssetNames.Add(sceneAssetName);
-            m_ResourceManager.LoadScene(sceneAssetName, priority, m_LoadSceneCallbacks, userData);
+            YooAsset.GameKitPatcher.Entry.LoadScene(sceneAssetName, priority, m_LoadSceneCallbacks, userData);
         }
 
         /// <summary>
@@ -401,10 +402,10 @@ namespace GameKit.Scene
                 throw new GameKitException("Scene asset name is invalid.");
             }
 
-            if (m_ResourceManager == null)
-            {
-                throw new GameKitException("You must set resource manager first.");
-            }
+            // if (m_ResourceManager == null)
+            // {
+            //     throw new GameKitException("You must set resource manager first.");
+            // }
 
             if (SceneIsUnloading(sceneAssetName))
             {
@@ -422,7 +423,8 @@ namespace GameKit.Scene
             }
 
             m_UnloadingSceneAssetNames.Add(sceneAssetName);
-            m_ResourceManager.UnloadScene(sceneAssetName, m_UnloadSceneCallbacks, userData);
+            // m_ResourceManager.UnloadScene(sceneAssetName, m_UnloadSceneCallbacks, userData);
+            YooAsset.GameKitPatcher.Entry.UnloadScene(sceneAssetName, m_UnloadSceneCallbacks, userData);
         }
 
         private void LoadSceneSuccessCallback(string sceneAssetName, float duration, object userData)

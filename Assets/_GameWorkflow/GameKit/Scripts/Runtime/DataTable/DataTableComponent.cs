@@ -87,14 +87,14 @@ namespace UnityGameKit.Runtime
                 return;
             }
 
-            if (baseComponent.EditorResourceMode)
-            {
-                m_DataTableManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            }
-            else
-            {
-                m_DataTableManager.SetResourceManager(GameKitModuleCenter.GetModule<IResourceManager>());
-            }
+            // if (baseComponent.EditorResourceMode)
+            // {
+            //     m_DataTableManager.SetResourceManager(baseComponent.EditorResourceHelper);
+            // }
+            // else
+            // {
+            //     m_DataTableManager.SetResourceManager(GameKitModuleCenter.GetModule<IResourceManager>());
+            // }
 
             DataTableHelperBase dataTableHelper = Helper.CreateHelper(m_DataTableHelperTypeName, m_CustomDataTableHelper);
             if (dataTableHelper == null)

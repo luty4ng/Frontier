@@ -331,7 +331,7 @@ namespace GameKit.DataTable
             }
 
             DataTable<T> dataTable = new DataTable<T>(name);
-            dataTable.SetResourceManager(m_ResourceManager);
+            // dataTable.SetResourceManager(m_ResourceManager);
             dataTable.SetDataProviderHelper(m_DataProviderHelper);
             m_DataTables.Add(typeNamePair, dataTable);
             return dataTable;
@@ -373,7 +373,7 @@ namespace GameKit.DataTable
 
             Type dataTableType = typeof(DataTable<>).MakeGenericType(dataRowType);
             DataTableBase dataTable = (DataTableBase)Activator.CreateInstance(dataTableType, name);
-            dataTable.SetResourceManager(m_ResourceManager);
+            // dataTable.SetResourceManager(m_ResourceManager);
             dataTable.SetDataProviderHelper(m_DataProviderHelper);
             m_DataTables.Add(typeNamePair, dataTable);
             return dataTable;

@@ -114,14 +114,14 @@ namespace UnityGameKit.Runtime
                 return;
             }
 
-            if (baseComponent.EditorResourceMode)
-            {
-                m_EntityManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            }
-            else
-            {
-                m_EntityManager.SetResourceManager(GameKitModuleCenter.GetModule<IResourceManager>());
-            }
+            // if (baseComponent.EditorResourceMode)
+            // {
+            //     m_EntityManager.SetResourceManager(baseComponent.EditorResourceHelper);
+            // }
+            // else
+            // {
+            //     m_EntityManager.SetResourceManager(GameKitModuleCenter.GetModule<IResourceManager>());
+            // }
 
             m_EntityManager.SetObjectPoolManager(GameKitModuleCenter.GetModule<IObjectPoolManager>());
 

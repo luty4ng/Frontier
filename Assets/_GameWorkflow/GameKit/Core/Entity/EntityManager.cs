@@ -1,7 +1,7 @@
 ﻿using GameKit.ObjectPool;
-using GameKit.Resource;
 using System;
 using System.Collections.Generic;
+using YooAsset.GameKitPatcher;
 
 namespace GameKit.Entity
 {
@@ -17,7 +17,7 @@ namespace GameKit.Entity
         private readonly Queue<EntityInfo> m_RecycleQueue;
         private readonly LoadAssetCallbacks m_LoadAssetCallbacks;
         private IObjectPoolManager m_ObjectPoolManager;
-        private IResourceManager m_ResourceManager;
+        // private IResourceManager m_ResourceManager;
         private IEntityHelper m_EntityHelper;
         private int m_Serial;
         private bool m_IsShutdown;
@@ -39,7 +39,7 @@ namespace GameKit.Entity
             m_RecycleQueue = new Queue<EntityInfo>();
             m_LoadAssetCallbacks = new LoadAssetCallbacks(LoadAssetSuccessCallback, LoadAssetFailureCallback, LoadAssetUpdateCallback, LoadAssetDependencyAssetCallback);
             m_ObjectPoolManager = null;
-            m_ResourceManager = null;
+            // m_ResourceManager = null;
             m_EntityHelper = null;
             m_Serial = 0;
             m_IsShutdown = false;
@@ -208,15 +208,15 @@ namespace GameKit.Entity
         /// 设置资源管理器。
         /// </summary>
         /// <param name="resourceManager">资源管理器。</param>
-        public void SetResourceManager(IResourceManager resourceManager)
-        {
-            if (resourceManager == null)
-            {
-                throw new GameKitException("Resource manager is invalid.");
-            }
+        // public void SetResourceManager(IResourceManager resourceManager)
+        // {
+        //     if (resourceManager == null)
+        //     {
+        //         throw new GameKitException("Resource manager is invalid.");
+        //     }
 
-            m_ResourceManager = resourceManager;
-        }
+        //     m_ResourceManager = resourceManager;
+        // }
 
         /// <summary>
         /// 设置实体辅助器。
@@ -563,7 +563,7 @@ namespace GameKit.Entity
         /// <param name="entityGroupName">实体组名称。</param>
         public void ShowEntity(int entityId, string entityAssetName, string entityGroupName)
         {
-            ShowEntity(entityId, entityAssetName, entityGroupName, Constant.DefaultPriority, null);
+            ShowEntity(entityId, entityAssetName, entityGroupName, 0, null);
         }
 
         /// <summary>
@@ -587,7 +587,7 @@ namespace GameKit.Entity
         /// <param name="userData">用户自定义数据。</param>
         public void ShowEntity(int entityId, string entityAssetName, string entityGroupName, object userData)
         {
-            ShowEntity(entityId, entityAssetName, entityGroupName, Constant.DefaultPriority, userData);
+            ShowEntity(entityId, entityAssetName, entityGroupName, 0, userData);
         }
 
         /// <summary>
@@ -600,10 +600,10 @@ namespace GameKit.Entity
         /// <param name="userData">用户自定义数据。</param>
         public void ShowEntity(int entityId, string entityAssetName, string entityGroupName, int priority, object userData)
         {
-            if (m_ResourceManager == null)
-            {
-                throw new GameKitException("You must set resource manager first.");
-            }
+            // if (m_ResourceManager == null)
+            // {
+            //     throw new GameKitException("You must set resource manager first.");
+            // }
 
             if (m_EntityHelper == null)
             {
@@ -641,7 +641,7 @@ namespace GameKit.Entity
             {
                 int serialId = ++m_Serial;
                 m_EntitiesBeingLoaded.Add(entityId, serialId);
-                m_ResourceManager.LoadAsset(entityAssetName, priority, m_LoadAssetCallbacks, ShowEntityInfo.Create(serialId, entityId, entityGroup, userData));
+                YooAsset.GameKitPatcher.Entry.LoadAsset(entityAssetName, priority, m_LoadAssetCallbacks, ShowEntityInfo.Create(serialId, entityId, entityGroup, userData));
                 return;
             }
 

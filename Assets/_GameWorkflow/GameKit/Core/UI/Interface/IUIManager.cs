@@ -89,7 +89,7 @@ namespace GameKit.UI
         /// 设置资源管理器。
         /// </summary>
         /// <param name="resourceManager">资源管理器。</param>
-        void SetResourceManager(IResourceManager resourceManager);
+        // void SetResourceManager(IResourceManager resourceManager);
 
         /// <summary>
         /// 设置界面辅助器。

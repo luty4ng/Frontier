@@ -275,10 +275,10 @@ namespace GameKit.DataTable
         /// 设置资源管理器。
         /// </summary>
         /// <param name="resourceManager">资源管理器。</param>
-        internal void SetResourceManager(IResourceManager resourceManager)
-        {
-            m_DataProvider.SetResourceManager(resourceManager);
-        }
+        // internal void SetResourceManager(IResourceManager resourceManager)
+        // {
+        //     m_DataProvider.SetResourceManager(resourceManager);
+        // }
 
         /// <summary>
         /// 设置数据提供者辅助器。

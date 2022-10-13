@@ -62,7 +62,7 @@ namespace GameKit
             }
 
             DataProvider<T> dataProvider = new DataProvider<T>(owner);
-            dataProvider.SetResourceManager(resourceManager);
+            // dataProvider.SetResourceManager(resourceManager);
             dataProvider.SetDataProviderHelper(dataProviderHelper);
             return dataProvider;
         }

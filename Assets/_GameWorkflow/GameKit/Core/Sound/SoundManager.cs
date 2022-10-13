@@ -1,4 +1,4 @@
-﻿using GameKit.Resource;
+﻿using YooAsset.GameKitPatcher;
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +13,7 @@ namespace GameKit.Sound
         private readonly List<int> m_SoundsBeingLoaded;
         private readonly HashSet<int> m_SoundsToReleaseOnLoad;
         private readonly LoadAssetCallbacks m_LoadAssetCallbacks;
-        private IResourceManager m_ResourceManager;
+        // private IResourceManager m_ResourceManager;
         private ISoundHelper m_SoundHelper;
         private int m_Serial;
         private EventHandler<PlaySoundSuccessEventArgs> m_PlaySoundSuccessEventHandler;
@@ -30,7 +30,7 @@ namespace GameKit.Sound
             m_SoundsBeingLoaded = new List<int>();
             m_SoundsToReleaseOnLoad = new HashSet<int>();
             m_LoadAssetCallbacks = new LoadAssetCallbacks(LoadAssetSuccessCallback, LoadAssetFailureCallback, LoadAssetUpdateCallback, LoadAssetDependencyAssetCallback);
-            m_ResourceManager = null;
+            // m_ResourceManager = null;
             m_SoundHelper = null;
             m_Serial = 0;
             m_PlaySoundSuccessEventHandler = null;
@@ -134,15 +134,15 @@ namespace GameKit.Sound
         /// 设置资源管理器。
         /// </summary>
         /// <param name="resourceManager">资源管理器。</param>
-        public void SetResourceManager(IResourceManager resourceManager)
-        {
-            if (resourceManager == null)
-            {
-                throw new GameKitException("Resource manager is invalid.");
-            }
+        // public void SetResourceManager(IResourceManager resourceManager)
+        // {
+        //     if (resourceManager == null)
+        //     {
+        //         throw new GameKitException("Resource manager is invalid.");
+        //     }
 
-            m_ResourceManager = resourceManager;
-        }
+        //     m_ResourceManager = resourceManager;
+        // }
 
         /// <summary>
         /// 设置声音辅助器。
@@ -429,10 +429,10 @@ namespace GameKit.Sound
         /// <returns>声音的序列编号。</returns>
         public int PlaySound(string soundAssetName, string soundGroupName, int priority, PlaySoundParams playSoundParams, object userData)
         {
-            if (m_ResourceManager == null)
-            {
-                throw new GameKitException("You must set resource manager first.");
-            }
+            // if (m_ResourceManager == null)
+            // {
+            //     throw new GameKitException("You must set resource manager first.");
+            // }
 
             if (m_SoundHelper == null)
             {
@@ -479,7 +479,7 @@ namespace GameKit.Sound
             }
 
             m_SoundsBeingLoaded.Add(serialId);
-            m_ResourceManager.LoadAsset(soundAssetName, priority, m_LoadAssetCallbacks, PlaySoundInfo.Create(serialId, soundGroup, playSoundParams, userData));
+            YooAsset.GameKitPatcher.Entry.LoadAsset(soundAssetName, priority, m_LoadAssetCallbacks, PlaySoundInfo.Create(serialId, soundGroup, playSoundParams, userData));
             return serialId;
         }
 

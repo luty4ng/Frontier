@@ -125,10 +125,10 @@ namespace GameKit.Config
         /// 设置资源管理器。
         /// </summary>
         /// <param name="resourceManager">资源管理器。</param>
-        public void SetResourceManager(IResourceManager resourceManager)
-        {
-            m_DataProvider.SetResourceManager(resourceManager);
-        }
+        // public void SetResourceManager(IResourceManager resourceManager)
+        // {
+        //     m_DataProvider.SetResourceManager(resourceManager);
+        // }
 
         /// <summary>
         /// 设置全局配置数据提供者辅助器。

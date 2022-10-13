@@ -1,4 +1,4 @@
-﻿using GameKit.Resource;
+﻿using YooAsset.GameKitPatcher;
 using System;
 
 namespace GameKit
@@ -15,7 +15,7 @@ namespace GameKit
         private readonly T m_Owner;
         private readonly LoadAssetCallbacks m_LoadAssetCallbacks;
         private readonly LoadBinaryCallbacks m_LoadBinaryCallbacks;
-        private IResourceManager m_ResourceManager;
+        // private IResourceManager m_ResourceManager;
         private IDataProviderHelper<T> m_DataProviderHelper;
         private EventHandler<ReadDataSuccessEventArgs> m_ReadDataSuccessEventHandler;
         private EventHandler<ReadDataFailureEventArgs> m_ReadDataFailureEventHandler;
@@ -31,7 +31,7 @@ namespace GameKit
             m_Owner = owner;
             m_LoadAssetCallbacks = new LoadAssetCallbacks(LoadAssetSuccessCallback, LoadAssetOrBinaryFailureCallback, LoadAssetUpdateCallback, LoadAssetDependencyAssetCallback);
             m_LoadBinaryCallbacks = new LoadBinaryCallbacks(LoadBinarySuccessCallback, LoadAssetOrBinaryFailureCallback);
-            m_ResourceManager = null;
+            // m_ResourceManager = null;
             m_DataProviderHelper = null;
             m_ReadDataSuccessEventHandler = null;
             m_ReadDataFailureEventHandler = null;
@@ -143,7 +143,7 @@ namespace GameKit
         /// <param name="dataAssetName">内容资源名称。</param>
         public void ReadData(string dataAssetName)
         {
-            ReadData(dataAssetName, Constant.DefaultPriority, null);
+            ReadData(dataAssetName, 0, null);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace GameKit
         /// <param name="userData">用户自定义数据。</param>
         public void ReadData(string dataAssetName, object userData)
         {
-            ReadData(dataAssetName, Constant.DefaultPriority, userData);
+            ReadData(dataAssetName, 0, userData);
         }
 
         /// <summary>
@@ -174,68 +174,17 @@ namespace GameKit
         /// <param name="userData">用户自定义数据。</param>
         public void ReadData(string dataAssetName, int priority, object userData)
         {
-            if (m_ResourceManager == null)
-            {
-                throw new GameKitException("You must set resource manager first.");
-            }
+            // if (m_ResourceManager == null)
+            // {
+            //     throw new GameKitException("You must set resource manager first.");
+            // }
 
             if (m_DataProviderHelper == null)
             {
                 throw new GameKitException("You must set data provider helper first.");
             }
 
-            HasAssetResult result = m_ResourceManager.HasAsset(dataAssetName);
-            switch (result)
-            {
-                case HasAssetResult.AssetOnDisk:
-                case HasAssetResult.AssetOnFileSystem:
-                    m_ResourceManager.LoadAsset(dataAssetName, priority, m_LoadAssetCallbacks, userData);
-                    break;
-
-                case HasAssetResult.BinaryOnDisk:
-                    m_ResourceManager.LoadBinary(dataAssetName, m_LoadBinaryCallbacks, userData);
-                    break;
-
-                case HasAssetResult.BinaryOnFileSystem:
-                    int dataLength = m_ResourceManager.GetBinaryLength(dataAssetName);
-                    EnsureCachedBytesSize(dataLength);
-                    if (dataLength != m_ResourceManager.LoadBinaryFromFileSystem(dataAssetName, s_CachedBytes))
-                    {
-                        throw new GameKitException(Utility.Text.Format("Load binary '{0}' from file system with internal error.", dataAssetName));
-                    }
-
-                    try
-                    {
-                        if (!m_DataProviderHelper.ReadData(m_Owner, dataAssetName, s_CachedBytes, 0, dataLength, userData))
-                        {
-                            throw new GameKitException(Utility.Text.Format("Load data failure in data provider helper, data asset name '{0}'.", dataAssetName));
-                        }
-
-                        if (m_ReadDataSuccessEventHandler != null)
-                        {
-                            ReadDataSuccessEventArgs loadDataSuccessEventArgs = ReadDataSuccessEventArgs.Create(dataAssetName, 0f, userData);
-                            m_ReadDataSuccessEventHandler(this, loadDataSuccessEventArgs);
-                            ReferencePool.Release(loadDataSuccessEventArgs);
-                        }
-                    }
-                    catch (Exception exception)
-                    {
-                        if (m_ReadDataFailureEventHandler != null)
-                        {
-                            ReadDataFailureEventArgs loadDataFailureEventArgs = ReadDataFailureEventArgs.Create(dataAssetName, exception.ToString(), userData);
-                            m_ReadDataFailureEventHandler(this, loadDataFailureEventArgs);
-                            ReferencePool.Release(loadDataFailureEventArgs);
-                            return;
-                        }
-
-                        throw;
-                    }
-
-                    break;
-
-                default:
-                    throw new GameKitException(Utility.Text.Format("Data asset '{0}' is '{1}'.", dataAssetName, result));
-            }
+            YooAsset.GameKitPatcher.Entry.LoadAsset(dataAssetName, priority, m_LoadAssetCallbacks, userData); 
         }
 
         /// <summary>
@@ -368,15 +317,15 @@ namespace GameKit
         /// 设置资源管理器。
         /// </summary>
         /// <param name="resourceManager">资源管理器。</param>
-        internal void SetResourceManager(IResourceManager resourceManager)
-        {
-            if (resourceManager == null)
-            {
-                throw new GameKitException("Resource manager is invalid.");
-            }
+        // internal void SetResourceManager(IResourceManager resourceManager)
+        // {
+        //     if (resourceManager == null)
+        //     {
+        //         throw new GameKitException("Resource manager is invalid.");
+        //     }
 
-            m_ResourceManager = resourceManager;
-        }
+        //     m_ResourceManager = resourceManager;
+        // }
 
         /// <summary>
         /// 设置数据提供者辅助器。

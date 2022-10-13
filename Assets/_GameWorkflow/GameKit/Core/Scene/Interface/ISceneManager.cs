@@ -43,7 +43,7 @@ namespace GameKit.Scene
         /// 设置资源管理器。
         /// </summary>
         /// <param name="resourceManager">资源管理器。</param>
-        void SetResourceManager(IResourceManager resourceManager);
+        // void SetResourceManager(IResourceManager resourceManager);
 
         /// <summary>
         /// 获取场景是否已加载。
