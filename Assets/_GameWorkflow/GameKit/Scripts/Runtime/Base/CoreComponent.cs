@@ -1,5 +1,4 @@
 ﻿using GameKit;
-using GameKit.Resource;
 using System;
 using UnityEngine;
 
@@ -59,14 +58,6 @@ namespace UnityGameKit.Runtime
             {
                 m_EditorResourceMode = value;
             }
-        }
-        /// <summary>
-        /// 获取或设置编辑器资源辅助器。
-        /// </summary>
-        public IResourceManager EditorResourceHelper
-        {
-            get;
-            set;
         }
 
         /// <summary>

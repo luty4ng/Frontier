@@ -12,9 +12,6 @@ namespace UnityGameKit.Editor
         private const string NoneOptionName = "<None>";
         private static readonly float[] GameSpeed = new float[] { 0f, 0.01f, 0.1f, 0.25f, 0.5f, 1f, 1.5f, 2f, 4f, 8f };
         private static readonly string[] GameSpeedForDisplay = new string[] { "0x", "0.01x", "0.1x", "0.25x", "0.5x", "1x", "1.5x", "2x", "4x", "8x" };
-
-        private SerializedProperty m_EditorResourceMode = null;
-        private SerializedProperty m_EditorLanguage = null;
         private SerializedProperty m_TextHelperTypeName = null;
         private SerializedProperty m_VersionHelperTypeName = null;
         private SerializedProperty m_LogHelperTypeName = null;
@@ -46,14 +43,6 @@ namespace UnityGameKit.Editor
 
             EditorGUI.BeginDisabledGroup(EditorApplication.isPlayingOrWillChangePlaymode);
             {
-                m_EditorResourceMode.boolValue = EditorGUILayout.BeginToggleGroup("Editor Resource Mode", m_EditorResourceMode.boolValue);
-                {
-                    EditorGUILayout.HelpBox("Editor resource mode option is only for editor mode. Game Kit will use editor resource files, which you should validate first.", MessageType.Warning);
-                    EditorGUILayout.PropertyField(m_EditorLanguage);
-                    EditorGUILayout.HelpBox("Editor language option is only use for localization test in editor mode.", MessageType.Info);
-                }
-                EditorGUILayout.EndToggleGroup();
-
                 EditorGUILayout.BeginVertical("box");
                 {
                     EditorGUILayout.LabelField("Global Helpers", EditorStyles.boldLabel);
@@ -171,8 +160,6 @@ namespace UnityGameKit.Editor
 
         private void OnEnable()
         {
-            m_EditorResourceMode = serializedObject.FindProperty("m_EditorResourceMode");
-            m_EditorLanguage = serializedObject.FindProperty("m_EditorLanguage");
             m_TextHelperTypeName = serializedObject.FindProperty("m_TextHelperTypeName");
             m_VersionHelperTypeName = serializedObject.FindProperty("m_VersionHelperTypeName");
             m_LogHelperTypeName = serializedObject.FindProperty("m_LogHelperTypeName");
@@ -182,7 +169,6 @@ namespace UnityGameKit.Editor
             m_GameSpeed = serializedObject.FindProperty("m_GameSpeed");
             m_RunInBackground = serializedObject.FindProperty("m_RunInBackground");
             m_NeverSleep = serializedObject.FindProperty("m_NeverSleep");
-
             RefreshTypeNames();
         }
 

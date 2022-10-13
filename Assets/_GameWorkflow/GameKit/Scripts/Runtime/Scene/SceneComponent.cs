@@ -1,5 +1,4 @@
 ﻿using GameKit;
-using GameKit.Resource;
 using GameKit.Scene;
 using System;
 using System.Collections.Generic;

@@ -1,6 +1,4 @@
-﻿using GameKit.Resource;
-
-namespace GameKit
+﻿namespace GameKit
 {
     /// <summary>
     /// 数据提供者创建器。
@@ -44,16 +42,11 @@ namespace GameKit
         /// <param name="resourceManager">资源管理器。</param>
         /// <param name="dataProviderHelper">数据提供者辅助器。</param>
         /// <returns>创建的数据提供者。</returns>
-        public static IDataProvider<T> Create<T>(T owner, IResourceManager resourceManager, IDataProviderHelper<T> dataProviderHelper)
+        public static IDataProvider<T> Create<T>(T owner, IDataProviderHelper<T> dataProviderHelper)
         {
             if (owner == null)
             {
                 throw new GameKitException("Owner is invalid.");
-            }
-
-            if (resourceManager == null)
-            {
-                throw new GameKitException("Resource manager is invalid.");
             }
 
             if (dataProviderHelper == null)
@@ -62,7 +55,6 @@ namespace GameKit
             }
 
             DataProvider<T> dataProvider = new DataProvider<T>(owner);
-            // dataProvider.SetResourceManager(resourceManager);
             dataProvider.SetDataProviderHelper(dataProviderHelper);
             return dataProvider;
         }

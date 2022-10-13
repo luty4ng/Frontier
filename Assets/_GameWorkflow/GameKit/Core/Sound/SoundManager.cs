@@ -340,7 +340,7 @@ namespace GameKit.Sound
         /// <returns>声音的序列编号。</returns>
         public int PlaySound(string soundAssetName, string soundGroupName)
         {
-            return PlaySound(soundAssetName, soundGroupName, Resource.Constant.DefaultPriority, null, null);
+            return PlaySound(soundAssetName, soundGroupName, 0, null, null);
         }
 
         /// <summary>
@@ -364,7 +364,7 @@ namespace GameKit.Sound
         /// <returns>声音的序列编号。</returns>
         public int PlaySound(string soundAssetName, string soundGroupName, PlaySoundParams playSoundParams)
         {
-            return PlaySound(soundAssetName, soundGroupName, Resource.Constant.DefaultPriority, playSoundParams, null);
+            return PlaySound(soundAssetName, soundGroupName, 0, playSoundParams, null);
         }
 
         /// <summary>
@@ -376,7 +376,7 @@ namespace GameKit.Sound
         /// <returns>声音的序列编号。</returns>
         public int PlaySound(string soundAssetName, string soundGroupName, object userData)
         {
-            return PlaySound(soundAssetName, soundGroupName, Resource.Constant.DefaultPriority, null, userData);
+            return PlaySound(soundAssetName, soundGroupName, 0, null, userData);
         }
 
         /// <summary>
@@ -415,7 +415,7 @@ namespace GameKit.Sound
         /// <returns>声音的序列编号。</returns>
         public int PlaySound(string soundAssetName, string soundGroupName, PlaySoundParams playSoundParams, object userData)
         {
-            return PlaySound(soundAssetName, soundGroupName, Resource.Constant.DefaultPriority, playSoundParams, userData);
+            return PlaySound(soundAssetName, soundGroupName, 0, playSoundParams, userData);
         }
 
         /// <summary>

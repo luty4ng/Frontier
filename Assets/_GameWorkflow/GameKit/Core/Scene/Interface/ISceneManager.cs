@@ -1,5 +1,4 @@
-﻿using GameKit.Resource;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace GameKit.Scene

@@ -1,5 +1,4 @@
 ﻿using GameKit;
-using GameKit.Resource;
 #if UNITY_5_3
 using GameKit.Scene;
 #endif
