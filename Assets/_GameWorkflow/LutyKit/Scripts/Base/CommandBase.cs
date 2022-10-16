@@ -12,7 +12,7 @@ namespace GameKit
             this.target = target;
         }
         public abstract void Excute();
-        public virtual void Revoke() { }
+        public abstract void Revoke();
         public virtual void OnEnterExcute() { }
         public virtual void OnExitExcute() { }
         public virtual void OnEnterRevoke() { }

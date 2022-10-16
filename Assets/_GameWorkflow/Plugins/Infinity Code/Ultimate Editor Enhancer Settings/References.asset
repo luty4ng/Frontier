@@ -184,6 +184,18 @@ MonoBehaviour:
     alignWindowToBar: 1
     windowMode: 0
   _sceneHistory:
+  - name: Demo
+    path: Assets/_GameWorkflow/LutyKit/Prototyping/Prototype Kit/Demo.unity
+  - name: Default
+    path: Assets/GameMain/Scenes/Default.unity
+  - name: GameLauncher
+    path: Assets/_GameWorkflow/GameKit/GameLauncher.unity
+  - name: DemoScene
+    path: Assets/_GameWorkflow/LutyKit/Prototyping/Customizable Skybox/Scenes/DemoScene.unity
+  - name: Demo
+    path: Assets/Prototype Kit 1/Demo.unity
+  - name: Main
+    path: Assets/GamePrototype/UntitledPortalGame/Scenes/Main.unity
   - name: SubScene
     path: Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Scene/SubScene.unity
   - name: GameScene2
@@ -192,11 +204,5 @@ MonoBehaviour:
     path: Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Scene/GameScene1.unity
   - name: Boot
     path: Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/Boot.unity
-  - name: GameLauncher
-    path: Assets/_GameWorkflow/GameKit/GameLauncher.unity
-  - name: Main
-    path: Assets/GamePrototype/UntitledPortalGame/Scenes/Main.unity
   - name: SampleScene
     path: Assets/Scenes/SampleScene.unity
-  - name: Default
-    path: Assets/GameMain/Scenes/Default.unity
