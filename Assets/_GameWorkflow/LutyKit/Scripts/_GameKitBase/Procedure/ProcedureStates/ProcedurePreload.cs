@@ -1,6 +1,5 @@
 using GameKit;
 using GameKit.Event;
-// using GameKit.Resource;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityGameKit.Runtime;

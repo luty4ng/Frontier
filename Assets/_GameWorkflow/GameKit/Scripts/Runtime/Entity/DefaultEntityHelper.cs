@@ -8,8 +8,6 @@ namespace UnityGameKit.Runtime
     /// </summary>
     public class DefaultEntityHelper : EntityHelperBase
     {
-        private ResourceComponent m_ResourceComponent = null;
-
         /// <summary>
         /// 实例化实体。
         /// </summary>
@@ -49,18 +47,8 @@ namespace UnityGameKit.Runtime
         /// <param name="entityInstance">要释放的实体实例。</param>
         public override void ReleaseEntity(object entityAsset, object entityInstance)
         {
-            m_ResourceComponent.UnloadAsset(entityAsset);
+            // YooAsset UnloadAsset
             Destroy((Object)entityInstance);
-        }
-
-        private void Start()
-        {
-            m_ResourceComponent = GameKitComponentCenter.GetComponent<ResourceComponent>();
-            if (m_ResourceComponent == null)
-            {
-                Log.Fatal("Resource component is invalid.");
-                return;
-            }
         }
     }
 }

@@ -1,5 +1,4 @@
-// using GameKit.Resource;
-using UnityGameKit.Runtime;
+// using UnityGameKit.Runtime;
 using ProcedureOwner = GameKit.Fsm.IFsm<GameKit.Procedure.IProcedureManager>;
 
 // 决定资源加载模式

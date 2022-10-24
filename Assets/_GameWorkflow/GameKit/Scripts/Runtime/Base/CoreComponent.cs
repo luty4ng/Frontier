@@ -1,6 +1,4 @@
 ﻿using GameKit;
-using GameKit.Localization;
-using GameKit.Resource;
 using System;
 using UnityEngine;
 
@@ -19,9 +17,6 @@ namespace UnityGameKit.Runtime
 
         [SerializeField]
         private bool m_EditorResourceMode = true;
-
-        [SerializeField]
-        private Language m_EditorLanguage = Language.Unspecified;
 
         [SerializeField]
         private string m_TextHelperTypeName = "UnityGameKit.Runtime.DefaultTextHelper";
@@ -63,30 +58,6 @@ namespace UnityGameKit.Runtime
             {
                 m_EditorResourceMode = value;
             }
-        }
-
-        /// <summary>
-        /// 获取或设置编辑器语言（仅编辑器内有效）。
-        /// </summary>
-        public Language EditorLanguage
-        {
-            get
-            {
-                return m_EditorLanguage;
-            }
-            set
-            {
-                m_EditorLanguage = value;
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置编辑器资源辅助器。
-        /// </summary>
-        public IResourceManager EditorResourceHelper
-        {
-            get;
-            set;
         }
 
         /// <summary>
@@ -408,11 +379,7 @@ namespace UnityGameKit.Runtime
                 objectPoolComponent.ReleaseAllUnused();
             }
 
-            ResourceComponent resourceCompoent = GameKitComponentCenter.GetComponent<ResourceComponent>();
-            if (resourceCompoent != null)
-            {
-                resourceCompoent.ForceUnloadUnusedAssets(true);
-            }
+            YooAsset.YooAssets.ForceUnloadAllAssets();        
         }
     }
 }
