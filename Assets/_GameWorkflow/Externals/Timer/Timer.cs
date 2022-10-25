@@ -16,10 +16,12 @@ using Object = UnityEngine.Object;
 /// Allows you to run events on a delay without the use of <see cref="Coroutine"/>s
 /// or <see cref="MonoBehaviour"/>s.
 ///
-/// To create and start a Timer, use the <see cref="Register"/> method.
+/// /// To create and start a Timer, use the <see cref="Register"/> method.
 /// </summary>
-namespace GameKit.Timer {
-    public class Timer {
+namespace QuickCode
+{
+    public class Timer
+    {
         #region Public Properties/Fields
 
         /// <summary>
@@ -46,21 +48,24 @@ namespace GameKit.Timer {
         /// <summary>
         /// Whether the timer is currently paused.
         /// </summary>
-        public bool isPaused {
+        public bool isPaused
+        {
             get { return this._timeElapsedBeforePause.HasValue; }
         }
 
         /// <summary>
         /// Whether or not the timer was cancelled.
         /// </summary>
-        public bool isCancelled {
+        public bool isCancelled
+        {
             get { return this._timeElapsedBeforeCancel.HasValue; }
         }
 
         /// <summary>
         /// Get whether or not the timer has finished running for any reason.
         /// </summary>
-        public bool isDone {
+        public bool isDone
+        {
             get { return this.isCompleted || this.isCancelled || this.isOwnerDestroyed; }
         }
 
@@ -87,13 +92,18 @@ namespace GameKit.Timer {
         /// after the parent has been destroyed.</param>
         /// <returns>A timer object that allows you to examine stats and stop/resume progress.</returns>
         public static Timer Register(float duration, Action onComplete, Action<float> onUpdate = null,
-            bool isLooped = false, bool useRealTime = false, MonoBehaviour autoDestroyOwner = null) {
+            bool isLooped = false, bool useRealTime = false, MonoBehaviour autoDestroyOwner = null)
+        {
             // create a manager object to update all the timers if one does not already exist.
-            if (Timer._manager == null) {
+            if (Timer._manager == null)
+            {
                 TimerManager managerInScene = Object.FindObjectOfType<TimerManager>();
-                if (managerInScene != null) {
+                if (managerInScene != null)
+                {
                     Timer._manager = managerInScene;
-                } else {
+                }
+                else
+                {
                     GameObject managerObject = new GameObject { name = "TimerManager" };
                     Timer._manager = managerObject.AddComponent<TimerManager>();
                 }
@@ -109,8 +119,10 @@ namespace GameKit.Timer {
         /// a <see cref="NullReferenceException"/> if the timer is null.
         /// </summary>
         /// <param name="timer">The timer to cancel.</param>
-        public static void Cancel(Timer timer) {
-            if (timer != null) {
+        public static void Cancel(Timer timer)
+        {
+            if (timer != null)
+            {
                 timer.Cancel();
             }
         }
@@ -120,8 +132,10 @@ namespace GameKit.Timer {
         /// a <see cref="NullReferenceException"/> if the timer is null.
         /// </summary>
         /// <param name="timer">The timer to pause.</param>
-        public static void Pause(Timer timer) {
-            if (timer != null) {
+        public static void Pause(Timer timer)
+        {
+            if (timer != null)
+            {
                 timer.Pause();
             }
         }
@@ -131,14 +145,18 @@ namespace GameKit.Timer {
         /// a <see cref="NullReferenceException"/> if the timer is null.
         /// </summary>
         /// <param name="timer">The timer to resume.</param>
-        public static void Resume(Timer timer) {
-            if (timer != null) {
+        public static void Resume(Timer timer)
+        {
+            if (timer != null)
+            {
                 timer.Resume();
             }
         }
 
-        public static void CancelAllRegisteredTimers() {
-            if (Timer._manager != null) {
+        public static void CancelAllRegisteredTimers()
+        {
+            if (Timer._manager != null)
+            {
                 Timer._manager.CancelAllTimers();
             }
 
@@ -146,8 +164,10 @@ namespace GameKit.Timer {
             // need to do anything in this case
         }
 
-        public static void PauseAllRegisteredTimers() {
-            if (Timer._manager != null) {
+        public static void PauseAllRegisteredTimers()
+        {
+            if (Timer._manager != null)
+            {
                 Timer._manager.PauseAllTimers();
             }
 
@@ -155,8 +175,10 @@ namespace GameKit.Timer {
             // need to do anything in this case
         }
 
-        public static void ResumeAllRegisteredTimers() {
-            if (Timer._manager != null) {
+        public static void ResumeAllRegisteredTimers()
+        {
+            if (Timer._manager != null)
+            {
                 Timer._manager.ResumeAllTimers();
             }
 
@@ -171,8 +193,10 @@ namespace GameKit.Timer {
         /// <summary>
         /// Stop a timer that is in-progress or paused. The timer's on completion callback will not be called.
         /// </summary>
-        public void Cancel() {
-            if (this.isDone) {
+        public void Cancel()
+        {
+            if (this.isDone)
+            {
                 return;
             }
 
@@ -183,8 +207,10 @@ namespace GameKit.Timer {
         /// <summary>
         /// Pause a running timer. A paused timer can be resumed from the same point it was paused.
         /// </summary>
-        public void Pause() {
-            if (this.isPaused || this.isDone) {
+        public void Pause()
+        {
+            if (this.isPaused || this.isDone)
+            {
                 return;
             }
 
@@ -194,8 +220,10 @@ namespace GameKit.Timer {
         /// <summary>
         /// Continue a paused timer. Does nothing if the timer has not been paused.
         /// </summary>
-        public void Resume() {
-            if (!this.isPaused || this.isDone) {
+        public void Resume()
+        {
+            if (!this.isPaused || this.isDone)
+            {
                 return;
             }
 
@@ -212,8 +240,10 @@ namespace GameKit.Timer {
         ///
         /// If the timer was cancelled/paused, this is equal to the number of seconds that passed between the timer
         /// starting and when it was cancelled/paused.</returns>
-        public float GetTimeElapsed() {
-            if (this.isCompleted || this.GetWorldTime() >= this.GetFireTime()) {
+        public float GetTimeElapsed()
+        {
+            if (this.isCompleted || this.GetWorldTime() >= this.GetFireTime())
+            {
                 return this.duration;
             }
 
@@ -228,7 +258,8 @@ namespace GameKit.Timer {
         /// <returns>The number of seconds that remain to be elapsed until the timer is completed. A timer
         /// is only elapsing time if it is not paused, cancelled, or completed. This will be equal to zero
         /// if the timer completed.</returns>
-        public float GetTimeRemaining() {
+        public float GetTimeRemaining()
+        {
             return this.duration - this.GetTimeElapsed();
         }
 
@@ -236,7 +267,8 @@ namespace GameKit.Timer {
         /// Get how much progress the timer has made from start to finish as a ratio.
         /// </summary>
         /// <returns>A value from 0 to 1 indicating how much of the timer's duration has been elapsed.</returns>
-        public float GetRatioComplete() {
+        public float GetRatioComplete()
+        {
             return this.GetTimeElapsed() / this.duration;
         }
 
@@ -244,7 +276,8 @@ namespace GameKit.Timer {
         /// Get how much progress the timer has left to make as a ratio.
         /// </summary>
         /// <returns>A value from 0 to 1 indicating how much of the timer's duration remains to be elapsed.</returns>
-        public float GetRatioRemaining() {
+        public float GetRatioRemaining()
+        {
             return this.GetTimeRemaining() / this.duration;
         }
 
@@ -259,7 +292,8 @@ namespace GameKit.Timer {
 
         #region Private Properties/Fields
 
-        private bool isOwnerDestroyed {
+        private bool isOwnerDestroyed
+        {
             get { return this._hasAutoDestroyOwner && this._autoDestroyOwner == null; }
         }
 
@@ -286,7 +320,8 @@ namespace GameKit.Timer {
         #region Private Constructor (use static Register method to create new timer)
 
         private Timer(float duration, Action onComplete, Action<float> onUpdate,
-            bool isLooped, bool usesRealTime, MonoBehaviour autoDestroyOwner) {
+            bool isLooped, bool usesRealTime, MonoBehaviour autoDestroyOwner)
+        {
             this.duration = duration;
             this._onComplete = onComplete;
             this._onUpdate = onUpdate;
@@ -305,24 +340,30 @@ namespace GameKit.Timer {
 
         #region Private Methods
 
-        private float GetWorldTime() {
+        private float GetWorldTime()
+        {
             return this.usesRealTime ? Time.realtimeSinceStartup : Time.time;
         }
 
-        private float GetFireTime() {
+        private float GetFireTime()
+        {
             return this._startTime + this.duration;
         }
 
-        private float GetTimeDelta() {
+        private float GetTimeDelta()
+        {
             return this.GetWorldTime() - this._lastUpdateTime;
         }
 
-        private void Update() {
-            if (this.isDone) {
+        private void Update()
+        {
+            if (this.isDone)
+            {
                 return;
             }
 
-            if (this.isPaused) {
+            if (this.isPaused)
+            {
                 this._startTime += this.GetTimeDelta();
                 this._lastUpdateTime = this.GetWorldTime();
                 return;
@@ -330,19 +371,25 @@ namespace GameKit.Timer {
 
             this._lastUpdateTime = this.GetWorldTime();
 
-            if (this._onUpdate != null) {
+            if (this._onUpdate != null)
+            {
                 this._onUpdate(this.GetTimeElapsed());
             }
 
-            if (this.GetWorldTime() >= this.GetFireTime()) {
+            if (this.GetWorldTime() >= this.GetFireTime())
+            {
 
-                if (this._onComplete != null) {
+                if (this._onComplete != null)
+                {
                     this._onComplete();
                 }
 
-                if (this.isLooped) {
+                if (this.isLooped)
+                {
                     this._startTime = this.GetWorldTime();
-                } else {
+                }
+                else
+                {
                     this.isCompleted = true;
                 }
             }
@@ -357,18 +404,22 @@ namespace GameKit.Timer {
         /// This will be instantiated the first time you create a timer -- you do not need to add it into the
         /// scene manually.
         /// </summary>
-        private class TimerManager : MonoBehaviour {
+        private class TimerManager : MonoBehaviour
+        {
             private List<Timer> _timers = new List<Timer>();
 
             // buffer adding timers so we don't edit a collection during iteration
             private List<Timer> _timersToAdd = new List<Timer>();
 
-            public void RegisterTimer(Timer timer) {
+            public void RegisterTimer(Timer timer)
+            {
                 this._timersToAdd.Add(timer);
             }
 
-            public void CancelAllTimers() {
-                foreach (Timer timer in this._timers) {
+            public void CancelAllTimers()
+            {
+                foreach (Timer timer in this._timers)
+                {
                     timer.Cancel();
                 }
 
@@ -376,31 +427,39 @@ namespace GameKit.Timer {
                 this._timersToAdd = new List<Timer>();
             }
 
-            public void PauseAllTimers() {
-                foreach (Timer timer in this._timers) {
+            public void PauseAllTimers()
+            {
+                foreach (Timer timer in this._timers)
+                {
                     timer.Pause();
                 }
             }
 
-            public void ResumeAllTimers() {
-                foreach (Timer timer in this._timers) {
+            public void ResumeAllTimers()
+            {
+                foreach (Timer timer in this._timers)
+                {
                     timer.Resume();
                 }
             }
 
             // update all the registered timers on every frame
             [UsedImplicitly]
-            private void Update() {
+            private void Update()
+            {
                 this.UpdateAllTimers();
             }
 
-            private void UpdateAllTimers() {
-                if (this._timersToAdd.Count > 0) {
+            private void UpdateAllTimers()
+            {
+                if (this._timersToAdd.Count > 0)
+                {
                     this._timers.AddRange(this._timersToAdd);
                     this._timersToAdd.Clear();
                 }
 
-                foreach (Timer timer in this._timers) {
+                foreach (Timer timer in this._timers)
+                {
                     timer.Update();
                 }
                 this._timers.RemoveAll(t => t.isDone);

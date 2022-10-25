@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameKit.Timer
+namespace QuickCode
 {
     public abstract class Ticker
     {

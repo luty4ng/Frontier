@@ -12,7 +12,7 @@ using FNLfloat = System.Single;
 //using FNLfloat = System.Double;
 
 
-namespace GameKit.QuickCode {
+namespace QuickCode {
     public class QuickNoise {
         private const short INLINE = 256; // MethodImplOptions.AggressiveInlining;
         private const short OPTIMISE = 512; // MethodImplOptions.AggressiveOptimization;

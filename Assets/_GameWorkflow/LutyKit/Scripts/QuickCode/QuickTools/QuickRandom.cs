@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace GameKit.QuickCode {
+namespace QuickCode {
     /// <summary>
     /// 简单随机数工具包
     /// @FAM 22.02.08

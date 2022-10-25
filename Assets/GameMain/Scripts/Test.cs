@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityGameKit.Runtime;
 
+[ExecuteInEditMode]
 public class Test : MonoBehaviour
 {
-    private void Update()
+    // Start is called before the first frame update
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            GameKitCenter.UI.OpenUIForm("Canvas", "Default");
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
