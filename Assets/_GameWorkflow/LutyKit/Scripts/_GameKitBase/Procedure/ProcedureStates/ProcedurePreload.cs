@@ -3,26 +3,19 @@ using GameKit.Event;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityGameKit.Runtime;
+using SceneManager = UnityEngine.SceneManagement.SceneManager;
 using ProcedureOwner = GameKit.Fsm.IFsm<GameKit.Procedure.IProcedureManager>;
 
 // 加载预制资源
 public class ProcedurePreload : ProcedureBase
 {
     private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
-
-    public override bool UseNativeDialog
-    {
-        get
-        {
-            return true;
-        }
-    }
-
     protected override void OnEnter(ProcedureOwner procedureOwner)
     {
         base.OnEnter(procedureOwner);
         m_LoadedFlag.Clear();
         PreloadResources();
+        PreloadScenes();
     }
 
     protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -41,51 +34,21 @@ public class ProcedurePreload : ProcedureBase
                 return;
             }
         }
-
-        // GameKitCenter.Scheduler.SetStartScene();
-        // procedureOwner.SetData<VarString>(ProcedureStateUtility.NEXT_SCENE_NAME, GameKitCenter.Scheduler.StartScene);
-        // if (GameKitCenter.Scheduler.MultiScene)
-        //     procedureOwner.SetData<VarBoolean>(ProcedureStateUtility.IS_SCENE_PRELOADED, true);
-        // else
-        //     procedureOwner.SetData<VarBoolean>(ProcedureStateUtility.IS_SCENE_PRELOADED, false);
         ChangeState<ProcedureChangeScene>(procedureOwner);
     }
 
     private void PreloadResources()
     {
-        LoadFont("MainFont");
-        LoadDialog();
-        // if (GameKitCenter.Data.DataTables == null)
-        //     Log.Fail("Preload resrouce fail.");
+
     }
 
-    private void LoadFont(string fontName)
+    private void PreloadScenes()
     {
-        // m_LoadedFlag.Add(Utility.Text.Format("Font.{0}", fontName), false);
-        // GameKitCenter.Resource.LoadAsset(AssetUtility.GetFontAsset(fontName), Constant.AssetPriority.FontAsset, new LoadAssetCallbacks(
-        //     (assetName, asset, duration, userData) =>
-        //     {
-        //         m_LoadedFlag[Utility.Text.Format("Font.{0}", fontName)] = true;
-        //         UGuiForm.SetMainFont((Font)asset);
-        //         Log.Info("Load font '{0}' OK.", fontName);
-        //     },
-
-        //     (assetName, status, errorMessage, userData) =>
-        //     {
-        //         Log.Error("Can not load font '{0}' from '{1}' with error message '{2}'.", fontName, assetName, errorMessage);
-        //     }));
-    }
-
-    private void LoadDialog()
-    {
-        // AddressableManager.instance.GetAssetsAsyn<TextAsset>(new List<string> { "DialogPack" }, callback: (IList<TextAsset> assets) =>
-        // {
-        //     for (int i = 0; i < assets.Count; i++)
-        //     {
-        //         string path = AssetUtility.GetDialogAsset(assets[i].name);
-        //         GameKitCenter.Dialog.PreloadDialogAsset(assets[i].name, assets[i].text);
-        //     }
-        // });
+        if(SceneManager.sceneCount > 1)
+        {
+            UnityEngine.SceneManagement.Scene preloadScene = SceneManager.GetSceneAt(1);
+            GameKitCenter.Scene.PreloadScene(preloadScene.name);
+        }
     }
 }
 

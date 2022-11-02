@@ -8,6 +8,7 @@ namespace GameKit.Scene
     /// </summary>
     public interface ISceneManager
     {
+        int LoadedScenesCount { get; }
         /// <summary>
         /// 加载场景成功事件。
         /// </summary>
@@ -148,5 +149,7 @@ namespace GameKit.Scene
         /// <param name="sceneAssetName">场景资源名称。</param>
         /// <param name="userData">用户自定义数据。</param>
         void UnloadScene(string sceneAssetName, object userData);
+
+        void PreloadScene(string sceneAssetName);
     }
 }

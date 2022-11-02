@@ -1,6 +1,7 @@
+
 using System.Transactions;
 using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using GameKit.Event;
 using GameKit;
 using GameKit.Element;
@@ -10,21 +11,9 @@ using ProcedureOwner = GameKit.Fsm.IFsm<GameKit.Procedure.IProcedureManager>;
 
 public class ProcedureChangeScene : ProcedureBase
 {
-    private const int MenuSceneId = 1;
-    private bool m_ChangeToMenu = false;
+    private Dictionary<string, bool> m_Flags = new Dictionary<string, bool>();
     private bool m_IsChangeSceneComplete = false;
-    private int m_BackgroundMusicId = 0;
-    private bool m_IsScenePreloaded;
     private ProcedureOwner m_CachedOwner;
-
-    public override bool UseNativeDialog
-    {
-        get
-        {
-            return false;
-        }
-    }
-
     protected override void OnInit(ProcedureOwner procedureOwner)
     {
         base.OnInit(procedureOwner);
@@ -35,23 +24,48 @@ public class ProcedureChangeScene : ProcedureBase
     {
         base.OnEnter(procedureOwner);
         m_IsChangeSceneComplete = false;
-        // QuickCinemachineCamera.Clear();
         GameKitCenter.Event.Subscribe(LoadSceneSuccessEventArgs.EventId, OnLoadSceneSuccess);
         GameKitCenter.Event.Subscribe(LoadSceneFailureEventArgs.EventId, OnLoadSceneFailure);
 
         // 停止所有声音
-        // GameKitCenter.Sound.StopAllLoadingSounds();
-        // GameKitCenter.Sound.StopAllLoadedSounds();
+        GameKitCenter.Sound.StopAllLoadingSounds();
+        GameKitCenter.Sound.StopAllLoadedSounds();
 
         // 隐藏所有实体
         GameKitCenter.Entity.HideAllLoadingEntities();
         GameKitCenter.Entity.HideAllLoadedEntities();
-        
+
         // 还原游戏速度
         GameKitCenter.Core.ResetNormalGameSpeed();
 
         string sceneName = procedureOwner.GetData<VarString>(ProcedureStateUtility.NEXT_SCENE_NAME);
-        m_IsScenePreloaded = procedureOwner.GetData<VarBoolean>(ProcedureStateUtility.IS_SCENE_PRELOADED);
+        int changeMode = procedureOwner.GetData<VarInt16>(ProcedureStateUtility.CHANGE_SCENE_MODE);
+
+        switch (changeMode)
+        {
+            case 0:
+                GameKitCenter.Scene.ChangeScene(sceneName);
+                break;
+            case 1:
+                GameKitCenter.Scene.ChangeScene(sceneName);
+                break;
+            case 2:
+                GameKitCenter.Scene.ChangeScene(sceneName);
+                break;
+            case 3:
+                GameKitCenter.Scene.ChangeScene(sceneName);
+                break;
+            default:
+                GameKitCenter.Scene.ChangeScene(sceneName);
+                break;
+        }
+
+        string[] loadedSceneAssetNames = GameKitCenter.Scene.GetLoadedSceneAssetNames();
+        for (int i = 0; i < loadedSceneAssetNames.Length; i++)
+        {
+            GameKitCenter.Scene.UnloadScene(loadedSceneAssetNames[i]);
+        }
+
         // if (!m_IsScenePreloaded)
         // {
         //     GameKitCenter.Event.Fire(this, SaveSettingsEventArgs.Create(null));
@@ -67,17 +81,13 @@ public class ProcedureChangeScene : ProcedureBase
         //     procedureOwner.SetData<VarBoolean>(ProcedureStateUtility.IS_SCENE_PRELOADED, false);
         //     OnSceneLoad();
         // }
-        // m_BackgroundMusicId = drScene.BackgroundMusicId;
-        if (m_IsChangeSceneComplete)
-        {
-
-        }
     }
 
     protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
     {
         GameKitCenter.Event.Unsubscribe(LoadSceneSuccessEventArgs.EventId, OnLoadSceneSuccess);
         GameKitCenter.Event.Unsubscribe(LoadSceneFailureEventArgs.EventId, OnLoadSceneFailure);
+        m_Flags.Clear();
         base.OnLeave(procedureOwner, isShutdown);
     }
 
@@ -89,15 +99,7 @@ public class ProcedureChangeScene : ProcedureBase
         {
             return;
         }
-
-        if (m_ChangeToMenu)
-        {
-            ChangeState<ProcedureMenu>(procedureOwner);
-        }
-        else
-        {
-            ChangeState<ProcedureMain>(procedureOwner);
-        }
+        ChangeState<ProcedureMain>(procedureOwner);
     }
 
     public Transform GetEnterTransform()

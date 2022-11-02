@@ -35,7 +35,7 @@ namespace YooAsset.GameKitPatcher
 
         public static async void LoadScene(string sceneAssetName, int priority, LoadSceneCallbacks loadSceneCallbacks, object userData)
         {
-            SceneOperationHandle handle = YooAssets.LoadSceneAsync(sceneAssetName);
+            SceneOperationHandle handle = YooAssets.LoadSceneAsync(sceneAssetName, priority: priority);
             await handle.ToUniTask();
             if (handle.Status == EOperationStatus.Succeed)
             {

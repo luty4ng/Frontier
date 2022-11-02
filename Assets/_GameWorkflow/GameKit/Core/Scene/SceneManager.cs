@@ -53,6 +53,14 @@ namespace GameKit.Scene
             }
         }
 
+        public int LoadedScenesCount
+        {
+            get
+            {
+                return m_LoadedSceneAssetNames.Count;
+            }
+        }
+
         /// <summary>
         /// 加载场景成功事件。
         /// </summary>
@@ -425,6 +433,12 @@ namespace GameKit.Scene
             m_UnloadingSceneAssetNames.Add(sceneAssetName);
             // m_ResourceManager.UnloadScene(sceneAssetName, m_UnloadSceneCallbacks, userData);
             YooAsset.GameKitPatcher.Entry.UnloadScene(sceneAssetName, m_UnloadSceneCallbacks, userData);
+        }
+
+        public void PreloadScene(string sceneAssetName)
+        {
+            if (!m_LoadedSceneAssetNames.Contains(sceneAssetName))
+                m_LoadedSceneAssetNames.Add(sceneAssetName);
         }
 
         private void LoadSceneSuccessCallback(string sceneAssetName, float duration, object userData)

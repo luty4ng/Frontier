@@ -5,14 +5,6 @@ using ProcedureOwner = GameKit.Fsm.IFsm<GameKit.Procedure.IProcedureManager>;
 
 public class ProcedureLaunch : ProcedureBase
 {
-    public override bool UseNativeDialog
-    {
-        get
-        {
-            return true;
-        }
-    }
-
     protected override void OnEnter(ProcedureOwner procedureOwner)
     {
         base.OnEnter(procedureOwner);
@@ -32,7 +24,7 @@ public class ProcedureLaunch : ProcedureBase
         base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
 
         // 运行一帧即切换到 Splash 展示流程
-        ChangeState<ProcedureSplash>(procedureOwner);
+        ChangeState<ProcedureCheck>(procedureOwner);
     }
 
     private void InitLanguageSettings()
@@ -68,7 +60,7 @@ public class ProcedureLaunch : ProcedureBase
 
     private void InitCurrentVariant()
     {
-        if (GameKitCenter.Core.EditorResourceMode)
+        if (GameKitCenter.EditorResourceMode)
         {
             // 编辑器资源模式不使用 AssetBundle，也就没有变体了
             return;

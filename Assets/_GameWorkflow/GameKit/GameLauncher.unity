@@ -592,7 +592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98acd7d3bd2bf54dadf9644f60e5cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EditorResourceMode: 1
   m_TextHelperTypeName: UnityGameKit.Runtime.DefaultTextHelper
   m_VersionHelperTypeName: UnityGameKit.Runtime.DefaultVersionHelper
   m_LogHelperTypeName: UnityGameKit.Runtime.DefaultLogHelper
@@ -944,8 +943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6242b052eb207b40b22e8fe77a315ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EnableLoadSceneUpdateEvent: 1
-  m_EnableLoadSceneDependencyAssetEvent: 1
 --- !u!1 &2094287610
 GameObject:
   m_ObjectHideFlags: 0
