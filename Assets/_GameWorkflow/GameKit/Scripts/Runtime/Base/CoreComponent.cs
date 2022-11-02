@@ -379,7 +379,7 @@ namespace UnityGameKit.Runtime
                 objectPoolComponent.ReleaseAllUnused();
             }
 
-            YooAsset.YooAssets.ForceUnloadAllAssets();        
+            YooAsset.GameKitPatcher.Entry.ForceUnloadAllAssets();        
         }
     }
 }

@@ -186,6 +186,8 @@ MonoBehaviour:
   _sceneHistory:
   - name: EmbeddedGraph
     path: Assets/_GameWorkflow/Plugins/NodeGraphProcessor/Samples/Examples/Scenes/EmbeddedGraph.unity
+  - name: RuntimeGraph
+    path: Assets/_GameWorkflow/Plugins/NodeGraphProcessor/Samples/Examples/Scenes/RuntimeGraph.unity
   - name: Conditional Graph
     path: Assets/_GameWorkflow/Plugins/NodeGraphProcessor/Samples/Examples/Scenes/Conditional
       Graph.unity

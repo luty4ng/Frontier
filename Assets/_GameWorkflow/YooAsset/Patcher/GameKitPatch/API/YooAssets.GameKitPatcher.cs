@@ -78,6 +78,11 @@ namespace YooAsset.GameKitPatcher
                 loadBinaryCallbacks.LoadBinaryFailureCallback.Invoke(binaryAssetName, LoadResourceStatus.TypeError, "YooAsset Load Binary Fail.", userData);
             }
         }
+
+        public static void ForceUnloadAllAssets()
+        {
+            YooAsset.YooAssets.ForceUnloadAllAssets();
+        }
     }
 }
 

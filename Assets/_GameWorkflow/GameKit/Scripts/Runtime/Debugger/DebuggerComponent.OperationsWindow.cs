@@ -27,7 +27,7 @@ namespace UnityGameKit.Runtime
 
                     if (GUILayout.Button("Unload Unused Assets", GUILayout.Height(30f)))
                     {
-                        YooAsset.YooAssets.ForceUnloadAllAssets();       
+                        YooAsset.GameKitPatcher.Entry.ForceUnloadAllAssets();       
                     }
                     
                     if (GUILayout.Button("Shutdown Game Kit (None)", GUILayout.Height(30f)))
