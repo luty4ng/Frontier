@@ -184,6 +184,16 @@ MonoBehaviour:
     alignWindowToBar: 1
     windowMode: 0
   _sceneHistory:
+  - name: GameKitDemo_UI
+    path: Assets/_GameWorkflow/GameKit/Demo/UI/GameKitDemo_UI.unity
+  - name: GameKitDemo_ObjectPool
+    path: Assets/_GameWorkflow/GameKit/Demo/ObjectPool/GameKitDemo_ObjectPool.unity
+  - name: GameLauncher
+    path: Assets/_GameWorkflow/GameKit/GameLauncher.unity
+  - name: GameKitDemo_Fsm
+    path: Assets/_GameWorkflow/GameKit/Demo/Fsm/GameKitDemo_Fsm.unity
+  - name: Default
+    path: Assets/GameMain/Scenes/Default.unity
   - name: EmbeddedGraph
     path: Assets/_GameWorkflow/Plugins/NodeGraphProcessor/Samples/Examples/Scenes/EmbeddedGraph.unity
   - name: RuntimeGraph
@@ -191,10 +201,6 @@ MonoBehaviour:
   - name: Conditional Graph
     path: Assets/_GameWorkflow/Plugins/NodeGraphProcessor/Samples/Examples/Scenes/Conditional
       Graph.unity
-  - name: Default
-    path: Assets/GameMain/Scenes/Default.unity
-  - name: GameLauncher
-    path: Assets/_GameWorkflow/GameKit/GameLauncher.unity
   - name: SubScene
     path: Assets/_GameWorkflow/YooAsset/Samples/Basic Sample/GameRes/Scene/SubScene.unity
   - name: GameScene2

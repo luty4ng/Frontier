@@ -118,3 +118,22 @@ MonoBehaviour:
       PackRuleName: PackDirectory
       FilterRuleName: CollectAll
       AssetTags: 
+  - GroupName: Test
+    GroupDesc: "\u6D4B\u8BD5\u8D44\u6E90"
+    AssetTags: 
+    ActiveRuleName: EnableGroup
+    Collectors:
+    - CollectPath: Assets/_GameWorkflow/GameKit/Demo/ObjectPool/Prefab/CubeForObjectPool.prefab
+      CollectorGUID: 08a78661af2711843abac466e0de0aac
+      CollectorType: 0
+      AddressRuleName: AddressByFileName
+      PackRuleName: PackDirectory
+      FilterRuleName: CollectAll
+      AssetTags: 
+    - CollectPath: Assets/_GameWorkflow/GameKit/Demo/UI/UIForm/UIFormTest.prefab
+      CollectorGUID: 5d6153ff53c38fe4897d0bf7e005dcb4
+      CollectorType: 0
+      AddressRuleName: AddressByFileName
+      PackRuleName: PackDirectory
+      FilterRuleName: CollectAll
+      AssetTags: 
