@@ -13,7 +13,7 @@ public partial class GameKitCenter : MonoBehaviour
     public static EventComponent Event { get; private set; }
     public static SettingComponent Setting { get; private set; }
     public static SceneComponent Scene { get; private set; }
-
+    public static SoundComponent Sound { get; private set; }
     private static void InitComponents()
     {
         Core = GameKitComponentCenter.GetComponent<CoreComponent>();
@@ -26,7 +26,7 @@ public partial class GameKitCenter : MonoBehaviour
         Event = GameKitComponentCenter.GetComponent<EventComponent>();
         Setting = GameKitComponentCenter.GetComponent<SettingComponent>();
         Scene = GameKitComponentCenter.GetComponent<SceneComponent>();
-        Debug.Log("Init Over");
+        Sound = GameKitComponentCenter.GetComponent<SoundComponent>();
     }
 }
 

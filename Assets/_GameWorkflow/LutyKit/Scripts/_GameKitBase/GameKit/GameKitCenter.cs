@@ -5,6 +5,13 @@ using YooAsset;
 public partial class GameKitCenter : MonoBehaviour
 {
     public static YooAssets.EPlayMode GamePlayMode;
+    public static bool EditorResourceMode
+    {
+        get
+        {
+            return GamePlayMode == YooAssets.EPlayMode.EditorSimulateMode;
+        }
+    }
     public YooAssets.EPlayMode PlayMode = YooAssets.EPlayMode.EditorSimulateMode;
     private void Start()
     {

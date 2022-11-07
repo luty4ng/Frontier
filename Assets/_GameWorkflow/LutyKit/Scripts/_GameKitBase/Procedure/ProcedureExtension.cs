@@ -9,16 +9,16 @@ public static class ProcedureExtension
 {    
     public static void ChangeSceneByDoor(this ProcedureComponent procedureComponent, string sceneName, string doorName)
     {
-        // ProcedureMain changeScene = (ProcedureMain)procedureComponent.GetProcedure<ProcedureMain>();
-        // changeScene.SetNextSceneName(sceneName);
-        // procedureComponent.CachedDoorName = doorName;
-        // changeScene.ExternalChangeState<ProcedureChangeScene>();
+        ProcedureMain mainProcedure = (ProcedureMain)procedureComponent.GetProcedure<ProcedureMain>();
+        mainProcedure.SetNextSceneName(sceneName);
+        mainProcedure.SetCachedDoorName(doorName);
+        mainProcedure.EnableChangeScene();
     }
 
-    public static void ChangeSceneBySelect(this ProcedureComponent procedureComponent, string sceneName)
+    public static void ChangeScene(this ProcedureComponent procedureComponent, string sceneName)
     {
-        // ProcedureMain changeScene = (ProcedureMain)procedureComponent.GetProcedure<ProcedureMain>();
-        // changeScene.SetNextSceneName(sceneName);
-        // changeScene.ExternalChangeState<ProcedureChangeScene>();
+        ProcedureMain mainProcedure = (ProcedureMain)procedureComponent.GetProcedure<ProcedureMain>();
+        mainProcedure.SetNextSceneName(sceneName);
+        mainProcedure.EnableChangeScene();
     }
 }

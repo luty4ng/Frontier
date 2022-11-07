@@ -70,6 +70,7 @@ namespace InfinityCode.UltimateEditorEnhancer.Behaviors
             }
             catch
             {
+                
             }
         }
 

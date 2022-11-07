@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Game Kit")]
 [assembly: AssemblyDescription("Game Kit")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Jiang Yin")]
+[assembly: AssemblyCompany("Luty")]
 [assembly: AssemblyProduct("Game Kit")]
-[assembly: AssemblyCopyright("Copyright © 2013-2021 Jiang Yin")]
-[assembly: AssemblyTrademark("Copyright © 2013-2021 Jiang Yin")]
+[assembly: AssemblyCopyright("Copyright © 2021-2022 Luty")]
+[assembly: AssemblyTrademark("Copyright © 2022-2022 Luty")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 将使此程序集中的类型对 COM 组件不可见。
